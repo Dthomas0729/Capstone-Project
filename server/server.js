@@ -31,7 +31,7 @@ app.use((req, res, next) => {
 });
 
 /* ====  Routes & Controllers  ==== */
-app.use("/api", routes);
+// app.use("/api", routes);
 
 //This is to catch anything that's trying to hit an api route that isn't made
 app.all("/api/*", function (req, res, next) {
