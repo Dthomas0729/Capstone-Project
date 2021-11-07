@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Link, Routes  } from "react-router-dom";
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 import Home from '../../pages/Home';
 import Movies from '../../pages/Movies';
@@ -15,29 +16,37 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="navbar">
-                <Link to='/'>
-                    Home
-                </Link>
-                <Link to='/movies'>
-                    Movies
-                </Link>
-                <Link to='/cannabis'>
-                    Cannabis
-                </Link>
-                <Link to='/snacks'>
-                    Snacks
-                </Link>
-                <Link to='/theater'>
-                    Theater
-                </Link>
-                <Link to='/orders'>
-                    Order
-                </Link>
-                <Link to='/profile'>
-                    Profile
-                </Link>
-            </div>
+            <nav>
+                <div className='nav-brand'>
+                    <Link style={{textDecoration: 'none', color: 'black'}}to='/'>
+                        <h1> Smokers Cinemas </h1>
+                    </Link>
+
+                    <Link to='/profile'>
+                        <AccountCircleIcon fontSize='large'/>
+                    </Link>
+                    
+                </div>
+
+                <div className="nav-links">
+                    <Link to='/movies'>
+                        Movies
+                    </Link>
+                    <Link to='/cannabis'>
+                        Cannabis
+                    </Link>
+                    <Link to='/snacks'>
+                        Snacks
+                    </Link>
+                    <Link to='/theater'>
+                        Theater
+                    </Link>
+                    <Link to='/orders'>
+                        Order
+                    </Link>
+                    
+                </div>
+            </nav>
                 
                 <Routes>
                     <Route 
