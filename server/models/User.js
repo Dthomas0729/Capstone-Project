@@ -9,7 +9,7 @@ const schema = new mongoose.Schema(
         lastName: String,
         email: { type: String, required: true, unique: true },
         password: { type: String, required: true },
-        age: Number,
+        age: { type: Number, required: true , min: 21},
         phone: String,
         googleId: String,
         img: { data: Buffer, contentType: String } 
