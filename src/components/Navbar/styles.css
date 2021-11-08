@@ -72,6 +72,14 @@ nav {
     justify-content: space-around;
 }
 
+.profile {
+    display: flex; 
+}
+
+.profile a:last-child {
+    margin-left: 1rem; 
+}
+
 .nav-links {
     display: flex;
     width: 50%;

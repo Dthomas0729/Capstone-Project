@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 const createJWT = require("./helpers");
 
 const login = async (req, res) => {
-    console.log("login controller");
+    // console.log("login controller");
     const { email, password } = req.body;
     // look for user via email
     let foundUser = await db.User.findOne({ email });

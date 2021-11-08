@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 import { Route, Link, Routes  } from "react-router-dom";
-import { FaUserCircle, FaBars } from 'react-icons/fa'
-import { AiOutlineClose } from 'react-icons/ai'
+import { FaUserCircle, FaBars } from 'react-icons/fa';
+import { AiOutlineClose } from 'react-icons/ai';
+import MediaQuery from 'react-responsive';
 
-import MediaQuery from 'react-responsive'
-
+import { getUser } from '../../api/UserService';
 
 import Home from '../../pages/Home';
 import Movies from '../../pages/Movies';
@@ -19,6 +19,7 @@ import "./styles.css";
 const Navbar = () => {
 
     const [sidebar, setSidebar] = useState(false);
+    const [user] = useState(getUser);
 
     const showSidebar = () => setSidebar(!sidebar) //toggles between True & False
 
@@ -32,10 +33,17 @@ const Navbar = () => {
                     </Link>
                 </div>
 
-                <div className='profile-icon'>
+                <div className='profile'>
+
                     <Link to='/profile'>
                         <FaUserCircle fontSize='28px'/>
                     </Link>
+                    <MediaQuery minWidth={950}>
+                    <Link to='/profile'>
+                        {user ? (<h2>{user.firstName}</h2>) : ( <p>Sign In</p> )}
+                    </Link>
+                    </MediaQuery>
+
                 </div>
                     
                 <MediaQuery maxWidth={949}>
