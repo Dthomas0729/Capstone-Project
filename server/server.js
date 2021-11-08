@@ -11,6 +11,8 @@ const routes = require('./routes');
 const app = express(); // create express app
 
 /* ====  Configuration  ==== */
+require('./config/database');
+const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 // to serve static files and to serve the react build
@@ -44,6 +46,6 @@ app.use((req, res, next) => {
     res.sendFile(path.join(__dirname, "..", "build", "index.html"));
 });
 
-app.listen(process.env.PORT || 5000, () => {
+app.listen(PORT, () => {
     console.log("Dankees server started on port 5000");
 });
