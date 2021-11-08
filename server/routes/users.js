@@ -1,0 +1,9 @@
+const router = require("express").Router();
+const { users } = require("../controllers");
+
+router.post("/", users.create);
+router.get("/", users.index);
+
+router.put("/:id", users.update)
+
+module.exports = router;
