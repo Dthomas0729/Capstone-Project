@@ -74,6 +74,16 @@ nav {
 
 .profile {
     display: flex; 
+    align-items: center;
+}
+
+.profile a {
+    text-decoration: none;
+    color: rgb(21, 63, 21); 
+}
+
+.profile a:first-child {
+    color: rgb(21, 63, 21); 
 }
 
 .profile a:last-child {
