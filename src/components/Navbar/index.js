@@ -1,6 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import { Route, Link, Routes  } from "react-router-dom";
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { FaUserCircle, FaBars } from 'react-icons/fa'
+import { AiOutlineClose } from 'react-icons/ai'
+
+import MediaQuery from 'react-responsive'
+
 
 import Home from '../../pages/Home';
 import Movies from '../../pages/Movies';
@@ -14,38 +18,78 @@ import "./styles.css";
 
 const Navbar = () => {
 
+    const [sidebar, setSidebar] = useState(false);
+
+    const showSidebar = () => setSidebar(!sidebar) //toggles between True & False
+
     return (
         <>
+
             <nav>
                 <div className='nav-brand'>
                     <Link style={{textDecoration: 'none', color: 'black'}}to='/'>
                         <h1> Smokers Cinemas </h1>
                     </Link>
+                </div>
 
+                <div className='profile-icon'>
                     <Link to='/profile'>
-                        <AccountCircleIcon fontSize='large'/>
+                        <FaUserCircle fontSize='28px'/>
                     </Link>
-                    
                 </div>
+                    
+                <MediaQuery maxWidth={949}>
+                    <div className='menu-bars'>
+                        <Link to="#">
+                            <FaBars fontSize={32} onClick={showSidebar}/>
+                        </Link>
+                    </div>
+                </MediaQuery>
 
-                <div className="nav-links">
-                    <Link to='/movies'>
-                        Movies
-                    </Link>
-                    <Link to='/cannabis'>
-                        Cannabis
-                    </Link>
-                    <Link to='/snacks'>
-                        Snacks
-                    </Link>
-                    <Link to='/theater'>
-                        Theater
-                    </Link>
-                    <Link to='/orders'>
-                        Order
-                    </Link>
-                    
-                </div>
+                <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+                    <div className='nav-menu-items' onClick={showSidebar}>
+                        <div className='navbar-toggle'>
+                            <Link to="#">
+                                <AiOutlineClose />
+                            </Link>
+                        </div>
+                        <Link to='/movies'>
+                            Movies
+                        </Link>
+                        <Link to='/cannabis'>
+                            Cannabis
+                        </Link>
+                        <Link to='/snacks'>
+                            Snacks
+                        </Link>
+                        <Link to='/theater'>
+                            Theater
+                        </Link>
+                        <Link to='/orders'>
+                            Order
+                        </Link>
+                    </div>
+            </nav>
+
+                <MediaQuery minWidth={950}>
+                    <ul className="nav-links">
+                        <Link to='/movies'>
+                            Movies
+                        </Link>
+                        <Link to='/cannabis'>
+                            Cannabis
+                        </Link>
+                        <Link to='/snacks'>
+                            Snacks
+                        </Link>
+                        <Link to='/theater'>
+                            Theater
+                        </Link>
+                        <Link to='/orders'>
+                            Order
+                        </Link>
+                    </ul>
+                </MediaQuery>
             </nav>
                 
                 <Routes>
