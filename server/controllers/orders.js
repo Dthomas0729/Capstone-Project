@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const index = (req, res) => {
     console.log("REQ.USER: ", req.user);
     db.Order.find()
-        .populate("user")
+        .populate("userId")
         .exec((err, populatedOrders) => {
             return res.status(200).json({
                 message: "Success",
