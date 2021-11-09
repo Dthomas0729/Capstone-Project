@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
 function App() {
-
+  
   // const [user] = useState(getUser)
 
   return (
