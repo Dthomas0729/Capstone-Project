@@ -9,8 +9,6 @@ const MoviePosterSlider = (props) => {
     const [current, setCurrent] = useState(0);
     const length = props.slides.length
 
-    const [nowPlaying, setNowPlaying] = useState(props.slides)
-
     const nextSlide = () => {
         setCurrent(current === length - 1 ? 0 : current + 1);
     }
@@ -34,7 +32,9 @@ const MoviePosterSlider = (props) => {
                             <div className={index === current ? 'slide active' : 'slide'} key={index}>
                                 
                                 {index === current && (
-                                    <img src={`https://image.tmdb.org/t/p/w500${movie.poster}`} className='image'></img>
+                                    <div className='image-overlay'>
+                                        <img src={`https://image.tmdb.org/t/p/w500${movie.poster}`} className='image'></img>
+                                    </div>
                                 )}
                                 
                                 <div className='movie-details'>
