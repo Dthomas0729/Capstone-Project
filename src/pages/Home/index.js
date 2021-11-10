@@ -4,10 +4,11 @@ import Welcome from '../../components/Welcome'
 import MoviePosterSlider from '../../components/MoviePosterSlider'
 
 
+const { REACT_APP_TMDB_API_KEY } = process.env;
+const tmdbUrl = `https://api.themoviedb.org/3/movie/now_playing?api_key=${REACT_APP_TMDB_API_KEY}&language=en-US&page=1`
 
 const Home = () => {
 
-    const tmdbUrl = `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US&page=1`
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
