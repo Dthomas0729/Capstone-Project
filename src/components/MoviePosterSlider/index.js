@@ -29,18 +29,18 @@ const MoviePosterSlider = (props) => {
            
             {props.slides.map((movie, index) => {
                         return (
-                            <div className={index === current ? 'slide active' : 'slide'} key={index}>
-                                
-                                {index === current && (
-                                    <div className='image-overlay'>
-                                        <img src={`https://image.tmdb.org/t/p/w500${movie.poster}`} className='image'></img>
-                                    </div>
-                                )}
-                                
-                                <div className='movie-details'>
+                            <>
+                                <div style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w500${movie.poster})` }}
+                                    className={index === current ? 'slide active' : 'slide'} key={index}>                                
 
                                 </div>
-                            </div>
+
+                                <div className={index === current ? 'details-slide active' : 'details-slide'} key={index}>
+                                        <p>{movie.title}</p>
+                                        <p>{movie.releaseDate}</p>
+                                </div>
+                            </>
+
                         )
                     })}
 
