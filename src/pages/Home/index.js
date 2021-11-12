@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Welcome from '../../components/Welcome'
-import MoviePosterSlider from '../../components/MoviePosterSlider'
-import TopShelf from '../../components/TopShelf'
+import Welcome from '../../components/Welcome';
+import MoviePosterSlider from '../../components/MoviePosterSlider';
+import TopShelf from '../../components/TopShelf';
+import Footer from '../../components/Footer';
 
 const { REACT_APP_TMDB_API_KEY } = process.env;
 const tmdbUrl = `https://api.themoviedb.org/3/movie/now_playing?api_key=${REACT_APP_TMDB_API_KEY}&language=en-US&page=1`
@@ -37,7 +38,7 @@ const Home = () => {
             <Welcome />
             <MoviePosterSlider slides={movies} />
             <TopShelf />
-
+            <Footer />
         </div>
     )
 }
