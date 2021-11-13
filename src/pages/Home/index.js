@@ -6,37 +6,61 @@ import TopShelf from '../../components/TopShelf';
 import Footer from '../../components/Footer';
 
 const { REACT_APP_TMDB_API_KEY } = process.env;
-const tmdbUrl = `https://api.themoviedb.org/3/movie/now_playing?api_key=${REACT_APP_TMDB_API_KEY}&language=en-US&page=1`
+const tmdbUrlNowPlaying = `https://api.themoviedb.org/3/movie/now_playing?api_key=${REACT_APP_TMDB_API_KEY}&language=en-US&page=1`
+const tmdbUrlUpcoming = `https://api.themoviedb.org/3/movie/upcoming?api_key=${REACT_APP_TMDB_API_KEY}&language=en-US&page=1`
 
 const Home = () => {
 
-    const [movies, setMovies] = useState([]);
+    const [nowPlaying, setNowPlaying] = useState([]);
+    const [upcoming, setUpcoming] = useState([]);
 
     useEffect(() => {
-        axios.get(tmdbUrl).then((res) => {
-            const newMovies = [];
+        try {
+            axios.get(tmdbUrlNowPlaying).then((res) => {
+                const nowPlayingMovies = [];
+    
+                res.data.results.forEach(movie => {
+                    nowPlayingMovies.push({
+                        key: movie,
+                        title: movie.title,
+                        tmbdId: movie.id,
+                        plot: movie.overview,
+                        genreIds: movie.genre_ids,
+                        popularity: movie.popularity,
+                        poster: movie.poster_path,
+                        releaseDate: movie.release_date,
+                    })
+                });
+                setNowPlaying(nowPlayingMovies);
+            })
 
-            res.data.results.forEach(movie => {
-                newMovies.push({
-                    key: {movie},
-                    title: movie.title,
-                    tmbdId: movie.id,
-                    plot: movie.overview,
-                    genreIds: movie.genre_ids,
-                    popularity: movie.popularity,
-                    poster: movie.poster_path,
-                    releaseDate: movie.release_date,
-                })
-            });
-
-            setMovies(newMovies);
-        })
-    }, [tmdbUrl]);
+            axios.get(tmdbUrlUpcoming).then((res) => {
+                const upcomingMovies = [];
+    
+                res.data.results.forEach(movie => {
+                    upcomingMovies.push({
+                        key: movie,
+                        title: movie.title,
+                        tmbdId: movie.id,
+                        plot: movie.overview,
+                        genreIds: movie.genre_ids,
+                        popularity: movie.popularity,
+                        poster: movie.poster_path,
+                        releaseDate: movie.release_date,
+                    })
+                });
+                setUpcoming(upcomingMovies);
+            })
+        }
+        catch(err) {
+            console.log(err)
+        }
+    }, []);
 
     return (
         <div>
             <Welcome />
-            <MoviePosterSlider slides={movies} />
+            <MoviePosterSlider nowPlaying={nowPlaying} upcoming={upcoming} />
             <TopShelf />
             <Footer />
         </div>

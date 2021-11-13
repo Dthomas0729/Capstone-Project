@@ -1,13 +1,18 @@
 import React, { useState }from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
+import MoviePoster from '../MoviePoster';
+
 import './styles.css'
 
 const MoviePosterSlider = (props) => {
 
-    console.log(props.slides);
+    console.log(props.nowPlaying);
+    console.log(props.upcoming);
 
+    const [nowPlaying, setNowPlaying] = useState(true)
     const [current, setCurrent] = useState(0);
-    const length = props.slides.length
+    
+    const length = (nowPlaying === true ? props.nowPlaying.length : props.upcoming.length);
 
     const nextSlide = () => {
         setCurrent(current === length - 1 ? 0 : current + 1);
@@ -17,27 +22,42 @@ const MoviePosterSlider = (props) => {
         setCurrent(current === 0 ? length - 1 : current - 1);
     }
 
-    if(!Array.isArray(props.slides) || props.slides.length <= 0) {
+    // const handleClick = () => {
+
+    // }
+
+    if(!Array.isArray(props.nowPlaying) || props.nowPlaying.length <= 0) {
+        return null;
+    }
+    if(!Array.isArray(props.upcoming) || props.upcoming.length <= 0) {
         return null;
     }
 
     return (
 
         <section className='slider'> 
+
+            <div className='slider-links'>
+                <button>Now Playing</button>
+                <button>Upcoming</button> 
+            </div>
+
+
            <FaChevronLeft className='left-arrow' onClick={prevSlide} />
            <FaChevronRight className='right-arrow' onClick={nextSlide} />
            
-            {props.slides.map((movie, index) => {
+            {props.nowPlaying.map((movie, index) => {
                         return (
                             <>
                                 <div style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w500${movie.poster})` }}
                                     className={index === current ? 'slide active' : 'slide'} key={`a${index}`}>                                
-
                                 </div>
 
-                                <div className={index === current ? 'details-slide active' : 'details-slide'} key={`b${index}`}>
-                                        <p>{movie.title}</p>
-                                        <p>{movie.releaseDate}</p>
+                                <MoviePoster index={index} current={current} posterPath={`https://image.tmdb.org/t/p/w500${movie.poster}`}/>
+
+                                <div className={index === current ? 'details-slide active' : 'details-slide'} key={`c${index}`}>
+                                        <h1>{movie.title}</h1>
+                                        <p>Release Date: {movie.releaseDate}</p>
                                 </div>
                             </>
 

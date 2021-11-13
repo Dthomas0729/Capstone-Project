@@ -1,0 +1,15 @@
+.main-poster.active {
+    opacity: 1;
+    transition-duration: .5s;
+
+    width: 75vw;
+    height: auto;
+    position: absolute;
+
+
+}
+
+.main-poster {
+    opacity: 0;
+    transition-duration: 1s ease;
+}

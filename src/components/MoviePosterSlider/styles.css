@@ -1,8 +1,9 @@
 .slider {
     position: relative;
-    height: 95vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
     overflow: hidden;
     background-color: black;
 }
@@ -69,6 +70,6 @@
     bottom: 10px;
     color: white;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1rem;
     /* transform: scale(1.02) */
 }
