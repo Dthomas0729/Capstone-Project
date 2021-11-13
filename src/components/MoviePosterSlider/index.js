@@ -31,11 +31,11 @@ const MoviePosterSlider = (props) => {
                         return (
                             <>
                                 <div style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w500${movie.poster})` }}
-                                    className={index === current ? 'slide active' : 'slide'} key={index}>                                
+                                    className={index === current ? 'slide active' : 'slide'} key={`a${index}`}>                                
 
                                 </div>
 
-                                <div className={index === current ? 'details-slide active' : 'details-slide'} key={index}>
+                                <div className={index === current ? 'details-slide active' : 'details-slide'} key={`b${index}`}>
                                         <p>{movie.title}</p>
                                         <p>{movie.releaseDate}</p>
                                 </div>

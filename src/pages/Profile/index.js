@@ -1,5 +1,4 @@
 import React, { useState }from 'react'
-import { useNavigate } from 'react-router';
 
 import Auth from '../../components/Auth'
 import { getUser } from '../../api/UserService';
