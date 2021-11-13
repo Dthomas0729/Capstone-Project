@@ -13,6 +13,8 @@ import Snacks from '../../pages/Snacks';
 import Order from '../../pages/Order';
 import Theater from '../../pages/Theater';
 import Profile from '../../pages/Profile';
+import SignUpForm from '../SignUpForm';
+import Logout from '../Logout'
 
 import "./styles.css";
 
@@ -129,19 +131,15 @@ const Navbar = () => {
                     <Route
                         path="/profile"
                         element={<Profile />}
-                    />
-                    {/* <Route
-                        path="/login"
-                        element={<Login />}
-                    />
+                    /> 
                     <Route
                         path="/logout"
                         element={<Logout />}
                     />
                     <Route
                         path="/signup"
-                        element={<SignUp />}
-                    /> */}
+                        element={<SignUpForm />}
+                    />
 
                 </Routes>   
         </>
