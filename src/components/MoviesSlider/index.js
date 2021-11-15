@@ -4,10 +4,10 @@ import MoviePoster from '../MoviePoster';
 
 import './styles.css'
 
-const MoviePosterSlider = (props) => {
+const MoviesSlider = (props) => {
 
-    console.log(props.nowPlaying);
-    console.log(props.upcoming);
+    // console.log(props.nowPlaying);
+    // console.log(props.upcoming);
 
     const [nowPlaying, setNowPlaying] = useState(true)
     const [current, setCurrent] = useState(0);
@@ -22,13 +22,18 @@ const MoviePosterSlider = (props) => {
         setCurrent(current === 0 ? length - 1 : current - 1);
     }
 
-    // const handleClick = () => {
+    // const handleNowPlayingClick = () => {
+    //     setNowPlaying(true)
+    // }
 
+    // const handleUpcomingClick = () => {
+    //     setNowPlaying(false)
     // }
 
     if(!Array.isArray(props.nowPlaying) || props.nowPlaying.length <= 0) {
         return null;
     }
+    
     if(!Array.isArray(props.upcoming) || props.upcoming.length <= 0) {
         return null;
     }
@@ -46,6 +51,9 @@ const MoviePosterSlider = (props) => {
            <FaChevronLeft className='left-arrow' onClick={prevSlide} />
            <FaChevronRight className='right-arrow' onClick={nextSlide} />
            
+           if (nowPlaying === true) {
+
+           }
             {props.nowPlaying.map((movie, index) => {
                         return (
                             <>
@@ -68,4 +76,4 @@ const MoviePosterSlider = (props) => {
     )
 }
 
-export default MoviePosterSlider
+export default MoviesSlider

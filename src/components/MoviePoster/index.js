@@ -10,7 +10,6 @@ const MoviePoster = (props) => {
             key={`b${props.index}`}
             src={props.posterPath} 
             alt={'Movie Poster'}></img>
-
     )
 }
 

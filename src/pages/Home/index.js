@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Welcome from '../../components/Welcome';
-import MoviePosterSlider from '../../components/MoviePosterSlider';
+import MoviesSlider from '../../components/MoviesSlider';
 import TopShelf from '../../components/TopShelf';
 import Footer from '../../components/Footer';
 
@@ -60,7 +60,7 @@ const Home = () => {
     return (
         <div>
             <Welcome />
-            <MoviePosterSlider nowPlaying={nowPlaying} upcoming={upcoming} />
+            <MoviesSlider nowPlaying={nowPlaying} upcoming={upcoming} />
             <TopShelf />
             <Footer />
         </div>

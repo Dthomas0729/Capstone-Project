@@ -1,6 +1,8 @@
 import React from 'react'
-import './styles.css'
 import topShelfImg from '../../images/top-shelf.jpg';
+import Strain from '../Strain';
+
+import './styles.css'
 
 const TopShelf = () => {
     return (
@@ -8,6 +10,7 @@ const TopShelf = () => {
             <div style={{ backgroundImage: `url(${topShelfImg})` }} alt="top shelf" className="top-shelf-image"> </div>
             <h1>Top Shelf</h1>
 
+            <Strain />
         </section>
     )
 }
