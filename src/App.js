@@ -9,7 +9,7 @@ function App() {
   // const [user] = useState(getUser)
 
   return (
-    <div className="App">
+    <div className="App" style={{backgroundColor: 'black', color: 'white'}}>
       <Router>
         <Navbar />
       </Router>

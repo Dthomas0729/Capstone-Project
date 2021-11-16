@@ -3,6 +3,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: transparent;
 }
 
 .menu-bars {
@@ -70,6 +71,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    color: white;
 }
 
 .profile {
