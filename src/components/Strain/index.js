@@ -2,11 +2,11 @@ import React from 'react';
 
 import './styles.css';
 
-const Strain = () => {
+const Strain = (props) => {
     return (
         <a className="strain" href='/cannabis'>
                 <div className='strain-details'>
-                    <h2>Jack Herer</h2>
+                    <h3>{props.name}</h3>
                     <p>$10.99</p>
                 </div>
 

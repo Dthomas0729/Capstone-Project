@@ -8,6 +8,7 @@ import Footer from '../../components/Footer';
 const { REACT_APP_TMDB_API_KEY } = process.env;
 const tmdbUrlNowPlaying = `https://api.themoviedb.org/3/movie/now_playing?api_key=${REACT_APP_TMDB_API_KEY}&language=en-US&page=1`
 const tmdbUrlUpcoming = `https://api.themoviedb.org/3/movie/upcoming?api_key=${REACT_APP_TMDB_API_KEY}&language=en-US&page=1`
+const kushyApi = 'http://api.kushy.net/api/1.1/tables/strains/rows/';
 
 const Home = () => {
 
