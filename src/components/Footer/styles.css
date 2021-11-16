@@ -1,4 +1,11 @@
 .footer {
     text-align: center;
     height: 30vh;
+    background-color: black;
+    color: white;
+}
+
+.footer h1 {
+    margin: 0px;
+    padding: 3rem;
 }

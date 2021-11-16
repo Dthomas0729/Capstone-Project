@@ -21,6 +21,7 @@ const TopShelf = () => {
                                 flavor={strain.flavor}
                                 effect={strain.effect} 
                                 thc={strain.thc}
+                                price={strain.price}
                                 pictureUrl={strain.pictureUrl}
                             />
                         )

@@ -6,6 +6,7 @@
             "thc": "16%",
             "flavor": "sweet",
             "effect": "giggly",
+            "price": "10.99",
             "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSEabGaWv2Y0-mbVbd35oyZ1SnlVznXMhZyw&usqp=CAU"
             
         },
@@ -15,6 +16,7 @@
             "thc": "19%",
             "flavor": "strawberry",
             "effect": "energetic",
+            "price": "10.99",
             "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzWwDrMNUIEPxv5jNJTF9ozDwRTDeyk25tZw&usqp=CAU"
             
         },
@@ -24,6 +26,7 @@
             "thc": "19%",
             "flavor": "sweet",
             "effect": "hungry",
+            "price": "10.99",
             "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKCVy1V1yKnvgO3l4anhGfkQs9A2Bqs8wP9g&usqp=CAU"
             
         },
@@ -33,6 +36,7 @@
             "thc": "16%",
             "flavor": "citrus",
             "effect": "relaxed",
+            "price": "10.99",
             "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBMq25orZijv7sqPIGpkfGkAL1SnE_waNFbQ&usqp=CAU"
         },
         {
@@ -41,6 +45,7 @@
             "thc": "19%",
             "flavor": "lemon",
             "effect": "euphoric",
+            "price": "10.99",
             "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi9RVLII1-37GqYWK5QaGQacPnygWtzKflHw&usqp=CAU"
             
         },
@@ -50,6 +55,7 @@
             "thc": "16%",
             "flavor": "earthy",
             "effect": "euphoric",
+            "price": "10.99",
             "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrkuF_nSVaF2nMoxtr8woReehM1OWYTGLrVg&usqp=CAU"
             
         },
@@ -59,6 +65,7 @@
             "thc": "17%",
             "flavor": "citrus",
             "effect": "energetic",
+            "price": "11.99",
             "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTalpO0YFU1zc5w2dG5zS8h1PGnzHyQ1HgaEQ&usqp=CAU"
         }
     ]
