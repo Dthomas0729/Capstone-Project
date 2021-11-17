@@ -16,5 +16,8 @@
     display: flex;
     margin: 12px 36px;
     justify-content: center;
+}
 
+.hero-buttons button {
+    margin: 0.5rem;
 }

@@ -15,8 +15,9 @@ const TopShelf = () => {
 
             {StrainData.strains.map((strain, index) => {
                         return (
-                            <Strain 
-                                name={strain.name} 
+                            <Strain
+                                name={strain.name}
+                                key={strain.name} 
                                 type={strain.type} 
                                 flavor={strain.flavor}
                                 effect={strain.effect} 

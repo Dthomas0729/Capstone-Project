@@ -17,6 +17,7 @@ import SignUpForm from '../SignUpForm';
 import Logout from '../Logout'
 
 import "./styles.css";
+import MovieDetails from "../../pages/MovieDetails";
 
 const Navbar = () => {
 

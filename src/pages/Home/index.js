@@ -22,7 +22,7 @@ const Home = () => {
     
                 res.data.results.forEach(movie => {
                     nowPlayingMovies.push({
-                        key: movie,
+                        key: movie.title,
                         title: movie.title,
                         tmbdId: movie.id,
                         plot: movie.overview,
@@ -40,7 +40,7 @@ const Home = () => {
     
                 res.data.results.forEach(movie => {
                     upcomingMovies.push({
-                        key: movie,
+                        key: movie.title,
                         title: movie.title,
                         tmbdId: movie.id,
                         plot: movie.overview,
