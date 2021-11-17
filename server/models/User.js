@@ -1,9 +1,10 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
+const Schema = mongoose.Schema;
 
 const SALT_ROUNDS = 6;
 
-const schema = new mongoose.Schema(
+const schema = new Schema(
     {
         firstName: String,
         lastName: String,
@@ -12,7 +13,7 @@ const schema = new mongoose.Schema(
         age: { type: Number, required: true , min: 21},
         phone: String,
         googleId: String,
-        img: { data: Buffer, contentType: String } 
+        img: { data: Buffer, contentType: String }
     },
     {
         timestamps: true,

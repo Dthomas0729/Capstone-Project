@@ -1,6 +1,7 @@
 import React, { useState }from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import MoviePoster from '../MoviePoster';
+import GetTicketsBtn from '../GetTicketsBtn';
 
 import './styles.css'
 
@@ -64,9 +65,11 @@ const MoviesSlider = (props) => {
                                 <MoviePoster index={index} current={current} posterPath={`https://image.tmdb.org/t/p/w500${movie.poster}`}/>
 
                                 <div className={index === current ? 'details-slide active' : 'details-slide'} key={`c${index}`}>
-                                        <h1>{movie.title}</h1>
-                                        <p>Release Date: {movie.releaseDate}</p>
+                                    <h1>{movie.title}</h1>
+                                    <p>Release Date: {movie.releaseDate}</p>
+                                    <GetTicketsBtn index={index} current={current} movie={movie}/>
                                 </div>
+
                             </>
 
                         )
