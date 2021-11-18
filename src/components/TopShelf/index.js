@@ -6,7 +6,7 @@ import StrainData from '../../api/strains.json'
 import './styles.css'
 
 const TopShelf = () => {
-    console.log(StrainData)
+    // console.log(StrainData)
     return (
         <section className="top-shelf">
             <div style={{ backgroundImage: `url(${topShelfImg})` }} alt="top shelf" className="top-shelf-image"> </div>
