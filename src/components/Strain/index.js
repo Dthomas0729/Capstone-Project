@@ -4,7 +4,7 @@ import './styles.css';
 
 const Strain = (props) => {
     return (
-        <a className="strain" href={`/cannabis/${props.name}`}>
+        <a className="strain" href={`/cannabis/${props.id}`}>
                 <div className='strain-details'>
                     <h3>{props.name}</h3>
                     <p>${props.price}</p>

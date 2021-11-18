@@ -18,6 +18,7 @@ import Logout from '../Logout'
 
 import "./styles.css";
 import MovieDetails from "../../pages/MovieDetails";
+import StrainDetails from "../../pages/StrainDetails";
 
 const Navbar = () => {
 
@@ -120,6 +121,10 @@ const Navbar = () => {
                     <Route
                         path="/cannabis"
                         element={<Cannabis />}
+                    />
+                    <Route
+                        path="/cannabis/:id"
+                        element={<StrainDetails />}
                     />
                     <Route
                         path="/snacks"

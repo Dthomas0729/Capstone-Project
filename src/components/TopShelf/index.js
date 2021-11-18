@@ -3,7 +3,6 @@ import topShelfImg from '../../images/top-shelf.jpg';
 import Strain from '../Strain';
 import StrainData from '../../api/strains.json'
 
-
 import './styles.css'
 
 const TopShelf = () => {
@@ -17,7 +16,7 @@ const TopShelf = () => {
                         return (
                             <Strain
                                 name={strain.name}
-                                key={strain.name} 
+                                id={strain.id} 
                                 type={strain.type} 
                                 flavor={strain.flavor}
                                 effect={strain.effect} 

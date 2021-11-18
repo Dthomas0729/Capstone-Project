@@ -1,0 +1,10 @@
+.strain-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.strain-details img {
+    width: 80vw;
+
+}

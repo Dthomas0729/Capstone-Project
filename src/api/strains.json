@@ -1,6 +1,7 @@
 {
     "strains": [
         {
+            "id": 1,
             "name": "Cherry Pie",
             "type": "Hybrid",
             "thc": "16%",
@@ -11,6 +12,7 @@
             
         },
         {
+            "id": 2,
             "name": "Strawberry Cough",
             "type": "Sativa",
             "thc": "19%",
@@ -21,6 +23,7 @@
             
         },
         {
+            "id": 3,
             "name": "Girl Scout Cookies",
             "type": "Hybrid",
             "thc": "19%",
@@ -31,6 +34,7 @@
             
         },
         {
+            "id": 4,
             "name": "Forbidden Fruit",
             "type": "Indica",
             "thc": "16%",
@@ -40,6 +44,7 @@
             "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBMq25orZijv7sqPIGpkfGkAL1SnE_waNFbQ&usqp=CAU"
         },
         {
+            "id": 5,
             "name": "Lemon Haze",
             "type": "Sativa",
             "thc": "19%",
@@ -50,6 +55,7 @@
             
         },
         {
+            "id": 6,
             "name": "Incredible Hulk",
             "type": "Sativa",
             "thc": "16%",
@@ -60,6 +66,7 @@
             
         },
         {
+            "id": 7,
             "name": "Green Crack",
             "type": "Sativa",
             "thc": "17%",
