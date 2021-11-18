@@ -10,10 +10,10 @@ const MoviesSlider = (props) => {
     // console.log(props.nowPlaying);
     // console.log(props.upcoming);
 
-    const [nowPlaying, setNowPlaying] = useState(true)
+    // const [nowPlaying, setNowPlaying] = useState(true)
     const [current, setCurrent] = useState(0);
     
-    const length = (nowPlaying === true ? props.nowPlaying.length : props.upcoming.length);
+    const length = (props.nowPlaying.length);
 
     const nextSlide = () => {
         setCurrent(current === length - 1 ? 0 : current + 1);
@@ -35,9 +35,9 @@ const MoviesSlider = (props) => {
         return null;
     }
     
-    if(!Array.isArray(props.upcoming) || props.upcoming.length <= 0) {
-        return null;
-    }
+    // if(!Array.isArray(props.upcoming) || props.upcoming.length <= 0) {
+    //     return null;
+    // }
 
     return (
 

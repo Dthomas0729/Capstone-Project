@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import MovieDetails from '../MovieDetails';
 
 const Movies = () => {
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import { useNavigate } from 'react-router'
-import MovieDetails from '../../pages/MovieDetails'
 
 const GetTicketsBtn = (props) => {
     const navigate = useNavigate()
@@ -8,7 +7,6 @@ const GetTicketsBtn = (props) => {
     const handleClick = () => {
         console.log(props.movie)
         navigate(`/movies/${props.movie.key}`);
-        return (<MovieDetails movie={props.movie} />)
     }
 
     return (
