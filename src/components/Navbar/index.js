@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Route, Link, Routes  } from "react-router-dom";
+import { Route, Link, Routes } from "react-router-dom";
 import { FaUserCircle, FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
 import MediaQuery from 'react-responsive';
@@ -112,6 +112,10 @@ const Navbar = () => {
                     <Route
                         path="/movies"
                         element={<Movies />} 
+                    />
+                    <Route
+                        path="/movies/:id"
+                        element={<MovieDetails />} 
                     />
                     <Route
                         path="/cannabis"

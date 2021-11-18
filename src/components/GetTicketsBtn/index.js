@@ -7,6 +7,7 @@ const GetTicketsBtn = (props) => {
 
     const handleClick = () => {
         console.log(props.movie)
+        navigate(`/movies/${props.movie.key}`);
         return (<MovieDetails movie={props.movie} />)
     }
 
