@@ -13,7 +13,8 @@ const schema = new Schema(
         age: { type: Number, required: true , min: 21},
         phone: String,
         googleId: String,
-        img: { data: Buffer, contentType: String }
+        img: { data: Buffer, contentType: String },
+        currentOrder: Object,
     },
     {
         timestamps: true,

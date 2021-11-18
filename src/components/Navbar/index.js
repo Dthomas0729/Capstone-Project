@@ -77,7 +77,7 @@ const Navbar = () => {
                         <Link to='/theater'>
                             Theater
                         </Link>
-                        <Link to='/orders'>
+                        <Link to='/order'>
                             Order
                         </Link>
                     </div>
@@ -97,7 +97,7 @@ const Navbar = () => {
                         <Link to='/theater'>
                             Theater
                         </Link>
-                        <Link to='/orders'>
+                        <Link to='/order'>
                             Order
                         </Link>
                     </ul>
@@ -108,39 +108,39 @@ const Navbar = () => {
                     <Route 
                         exact 
                         path="/"
-                        element={<Home />} 
+                        element={<Home user={user} />} 
                     />
                     <Route
                         path="/movies"
-                        element={<Movies />} 
+                        element={<Movies user={user} />} 
                     />
                     <Route
                         path="/movies/:id"
-                        element={<MovieDetails />} 
+                        element={<MovieDetails user={user} />} 
                     />
                     <Route
                         path="/cannabis"
-                        element={<Cannabis />}
+                        element={<Cannabis user={user} />}
                     />
                     <Route
                         path="/cannabis/:id"
-                        element={<StrainDetails />}
+                        element={<StrainDetails user={user} />}
                     />
                     <Route
                         path="/snacks"
-                        element={<Snacks />}
+                        element={<Snacks user={user} />}
                     />
                     <Route
                         path="/theater"
-                        element={<Theater />}
+                        element={<Theater user={user} />}
                     />
                     <Route
                         path="/order"
-                        element={<Order />}
+                        element={<Order user={user} />}
                     />
                     <Route
                         path="/profile"
-                        element={<Profile />}
+                        element={<Profile user={user} />}
                     /> 
                     <Route
                         path="/logout"
