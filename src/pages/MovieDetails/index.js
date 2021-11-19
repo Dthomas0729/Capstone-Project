@@ -1,29 +1,38 @@
 import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router'
 import axios from 'axios';
+
 import './styles.css'
 
-import { useParams } from 'react-router'
 
 const { REACT_APP_TMDB_API_KEY } = process.env;
 
-const MovieDetails = () => {
+const MovieDetails = (props) => {
     const { id } = useParams();
     const tmdbIdUrl = `https://api.themoviedb.org/3/movie/${id}?api_key=${REACT_APP_TMDB_API_KEY}&language=en-US&page=1`
     
     const [movie, setMovie] = useState({});
-    const [startTime, setStartTime] = useState();
-    // const [upcoming, setUpcoming] = useState([]);
+    const [startTime, setStartTime] = useState('2:45pm');
 
-    const handleStartTime = (event) => {
-        const time = event.target.value;
+    const handleSubmit = (e) => {
+        const orderData = {
+            movie: movie,
+            startTime: startTime,
+        }
+        
+        localStorage.setItem('order', JSON.stringify(orderData))
+    }
+    
+    const handleStartTime = (e) => {
+        const time = e.target.value;
         setStartTime(time);
+        console.log(time)
     }
 
     useEffect(() => {
         try {
             axios.get(tmdbIdUrl).then((res) => {
                 const movie = res.data;
-                console.log(movie);
 
                 const movieDetails = {
                     key: movie.id,
@@ -42,6 +51,7 @@ const MovieDetails = () => {
         catch(err) {
             console.log(err)
         }
+
     }, [tmdbIdUrl]);
 
     return (
@@ -61,7 +71,8 @@ const MovieDetails = () => {
                 </div>
 
                 <p>{movie.plot}</p>
-                <button>Add To Order</button>
+                <button onClick={handleSubmit} type="submit">Submit</button>
+                
             </div>
         </>
     )

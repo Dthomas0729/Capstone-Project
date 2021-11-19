@@ -14,7 +14,6 @@ const schema = new Schema(
         phone: String,
         googleId: String,
         img: { data: Buffer, contentType: String },
-        currentOrder: Object,
     },
     {
         timestamps: true,
