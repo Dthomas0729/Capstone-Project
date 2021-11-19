@@ -7,6 +7,7 @@ const orderSchema = new Schema({
     gramAmount: Number,
     accessories: [String],
     movie: Object,
+    tickets: Number,
     startTime: Date,
     snacks: [String],
     details: String,
