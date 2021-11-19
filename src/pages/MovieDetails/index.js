@@ -14,13 +14,13 @@ const MovieDetails = (props) => {
     const [movie, setMovie] = useState({});
     const [startTime, setStartTime] = useState('2:45pm');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = () => {
         const orderData = {
             movie: movie,
             startTime: startTime,
         }
         
-        localStorage.setItem('order', JSON.stringify(orderData))
+        localStorage.setItem('movieOrder', JSON.stringify(orderData))
     }
     
     const handleStartTime = (e) => {
