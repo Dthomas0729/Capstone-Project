@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router'
+import { useParams, useNavigate } from 'react-router'
 import axios from 'axios';
 
 import './styles.css'
@@ -8,6 +8,7 @@ import './styles.css'
 const { REACT_APP_TMDB_API_KEY } = process.env;
 
 const MovieDetails = (props) => {
+    const navigate = useNavigate();
     const { id } = useParams();
     const tmdbIdUrl = `https://api.themoviedb.org/3/movie/${id}?api_key=${REACT_APP_TMDB_API_KEY}&language=en-US&page=1`
     
@@ -21,6 +22,7 @@ const MovieDetails = (props) => {
         }
         
         localStorage.setItem('movieOrder', JSON.stringify(orderData))
+        navigate('/cannabis');
     }
     
     const handleStartTime = (e) => {

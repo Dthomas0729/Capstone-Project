@@ -1,4 +1,5 @@
 import React, { useState, useEffect }from 'react'
+import './styles.css';
 
 const Order = (props) => {
     const strainData = JSON.parse(localStorage.getItem('strainOrder'));
@@ -17,37 +18,42 @@ const Order = (props) => {
 
     console.log(order);
     return (
-        <div>
+        <div className='order-review'>
             <h1>Order Review</h1>
 
-            <div className='movie-review-container'>
-                <h3>Movie</h3>
-                <div className='movie-review'>
+            <div className='movie-order'>
+                <div className='movie-order-details'>
                     <h2>{order.movie.title}</h2>
                     <button>{order.startTime}</button>
                 </div>
-                <div className='tickets'>
-                    <h3>tickets</h3>
-                    <input type='Number'></input>
+
+                <div className='movie-order-img'>
+                    <img src={order.movie.poster}></img>
                 </div>
             </div>
             
-            <div className='strain-review-container'>
-                <h3>Cannabis Shop</h3>
-                <div className='strain-review'>
+            <div className='strain-order'>
+
+                <div className='movie-order-img'>
+                    <img src={order.strain.pictureUrl}></img>
+                </div>
+
+                <div className='strain-order-details'>
                     <h2>{order.strain.name}</h2>
                     <button>{order.gramAmount} grams</button>
                 </div>
-                <div className='add-ons-container'>
-                    <h3>Add-Ons</h3>
+            </div>
 
-                    <div className='add-ons'>
-                        <h3>joint pre-rolled</h3>
-                        <button>3</button>
+            <div className='add-ons-container'>
+                <h3>Add-Ons</h3>
 
-                    </div>
+                <div className='add-ons'>
+                    <h3>joint pre-rolled</h3>
+                    <button>3</button>
+
                 </div>
             </div>
+
 
             <button type='submit' className='submit-order'>Submit Order</button>
         </div>

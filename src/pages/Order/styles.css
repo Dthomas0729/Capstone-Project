@@ -1,0 +1,42 @@
+.order-review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.movie-order, .strain-order {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.movie-order-details, .strain-order-details {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    align-self: center;
+    align-items: center;
+}
+
+.movie-order-img, .strain-order-img {
+    display: flex;
+    width: 50vw;
+    justify-content: center;
+}
+
+.movie-order img, .strain-order img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+}
+
+.movie-order-container div, .strain-order-container div {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    width: 100vw;
+}
+ 
