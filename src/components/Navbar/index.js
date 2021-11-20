@@ -33,7 +33,7 @@ const Navbar = () => {
             <nav>
                 <div className='nav-brand'>
                     <Link style={{textDecoration: 'none', color: 'white'}} to='/'>
-                        <h1> Smokers Cinemas </h1>
+                        <h1> Dankees </h1>
                     </Link>
                 </div>
 
