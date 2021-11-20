@@ -11,7 +11,7 @@ const TopShelf = () => {
         <section className="top-shelf">
             <div style={{ backgroundImage: `url(${topShelfImg})` }} alt="top shelf" className="top-shelf-image"> </div>
             <h1>Top Shelf</h1>
-
+            
             {StrainData.strains.map((strain, index) => {
                         return (
                             <Strain

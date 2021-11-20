@@ -1,11 +1,12 @@
 .footer {
     text-align: center;
-    height: 30vh;
+    height: 20vh;
     background-color: black;
     color: white;
 }
 
-.footer h1 {
-    margin: 0px;
-    padding: 3rem;
+.footer img {
+    width: 5rem;
+    border-radius: 50%;
+    margin-top: 4rem;
 }

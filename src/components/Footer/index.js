@@ -1,10 +1,12 @@
 import React from 'react'
 import './styles.css';
+import sliccTechLogo from '../../images/slicctech-logo-04.png'
 
 const Footer = () => {
     return (
         <div className="footer">
-            <h1>Footer</h1>
+            <img className='slicctech' alt="slicc tech logo" src={sliccTechLogo}></img>
+
         </div>
     )
 }

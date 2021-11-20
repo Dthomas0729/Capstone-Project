@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 
+import MoviesSlider from '../../components/MoviesSlider';
+
 const { REACT_APP_TMDB_API_KEY } = process.env;
 const tmdbUrlNowPlaying = `https://api.themoviedb.org/3/movie/now_playing?api_key=${REACT_APP_TMDB_API_KEY}&language=en-US&page=1`
 
@@ -36,6 +38,7 @@ const Movies = () => {
     return ( 
             <div className="movies-page">
                 <h1>Now Playing</h1>
+                <MoviesSlider nowPlaying={nowPlaying} />
 
                 <div className="movies-list">
                     {nowPlaying.map((movie, index) => {

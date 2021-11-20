@@ -12,7 +12,7 @@ const Welcome = () => {
 
             <div className='hero-buttons'>
                 <button className='get-started' onClick={()=> navigate('/movies')}>Get Started</button>
-                <button className='learn-more'>Learn More</button>
+                {/* <button className='learn-more'>Learn More</button> */}
             </div>
         </section>
     )

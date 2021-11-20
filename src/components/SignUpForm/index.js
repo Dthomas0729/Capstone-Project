@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAlert } from 'react-alert';
 import "./styles.css";
 import * as UserService from "../../api/UserService";
 import { setToken } from "../../utils/tokenService";
@@ -24,6 +25,7 @@ const SignupForm = () => {
 
         const res = await UserService.create(newUser);
 
+
         //trying to extract a token
         if (res.data.data) {
             if (res.data.data.token) {
@@ -43,7 +45,9 @@ const SignupForm = () => {
     };
 
     return (
-        <div className="signup-inputs">
+
+        <div className="signup-form">
+            <h1>Sign Up Here</h1>
             <input
                 onChange={(e) => setFirstName(e.target.value)}
                 value={firstName}

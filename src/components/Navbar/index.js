@@ -65,40 +65,40 @@ const Navbar = () => {
                                 <AiOutlineClose />
                             </Link>
                         </div>
+                        <Link to='/'>
+                            Home
+                        </Link>
                         <Link to='/movies'>
                             Movies
                         </Link>
                         <Link to='/cannabis'>
                             Cannabis
                         </Link>
-                        <Link to='/snacks'>
-                            Snacks
-                        </Link>
-                        <Link to='/theater'>
-                            Theater
+                        <Link to='/profile'>
+                            Profile
                         </Link>
                         <Link to='/order'>
-                            Order
+                            My Order
                         </Link>
                     </div>
             </nav>
 
                 <MediaQuery minWidth={950}>
                     <ul className="nav-links">
+                        <Link to='/'>
+                            Home
+                        </Link>
                         <Link to='/movies'>
                             Movies
                         </Link>
                         <Link to='/cannabis'>
                             Cannabis
                         </Link>
-                        <Link to='/snacks'>
-                            Snacks
-                        </Link>
-                        <Link to='/theater'>
-                            Theater
+                        <Link to='/profile'>
+                            Profile
                         </Link>
                         <Link to='/order'>
-                            Order
+                            My Order
                         </Link>
                     </ul>
                 </MediaQuery>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router';
+import { useParams, useNavigate } from 'react-router';
+import { useAlert } from 'react-alert';
 import Data from '../../api/strains.json'
 import TopShelf from '../../components/TopShelf';
 
@@ -14,6 +15,8 @@ const fetchData = (id) => {
 }
 
 const StrainDetails = () => {
+    const alert = useAlert();
+    const navigate = useNavigate();
     const { id } = useParams();
 
     const [strain] = useState(fetchData(id));
@@ -27,6 +30,13 @@ const StrainDetails = () => {
         
         console.log(orderData);
         localStorage.setItem('strainOrder', JSON.stringify(orderData))
+        alert.show(`${amount} grams of ${strain.name} has been added to your order`)
+
+        if (localStorage.getItem('movieOrder')) {
+            navigate('/order');
+        } else {
+            navigate('/movies');
+        }
     }
 
     return (
@@ -49,7 +59,7 @@ const StrainDetails = () => {
                     placeholder="0"
                 />
                 
-                <button onClick={handleSubmit} type="submit">Submit</button>      
+                <button onClick={handleSubmit} type="submit">Add To Order</button>      
             </div>
             <TopShelf />
         </>

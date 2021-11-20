@@ -28,11 +28,12 @@ const show = (req, res) => {
 
 // ===== Create - POST - Functional (Status code 201)
 const create = (req, res) => {
+
     req.body.user = mongoose.Types.ObjectId(req.body.user);
     db.Order.create(req.body, (err, savedOrder) => {
-        savedOrder.populate("user");
+        // savedOrder.populate("userId");
         // console.log(savedOrder, "SAVED");
-        if (err) return console.log("Error in orders#create:", err);
+        if (err) return console.log("CREATE ORDER ERROR:", err);
 
         return res.status(201).json({
             message: "Success",

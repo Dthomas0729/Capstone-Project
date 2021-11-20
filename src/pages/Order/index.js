@@ -1,4 +1,5 @@
 import React, { useState, useEffect }from 'react'
+import * as OrderService from '../../api/OrderService';
 import './styles.css';
 
 const Order = (props) => {
@@ -16,7 +17,12 @@ const Order = (props) => {
     const [addOns, setAddOns] = useState();
     const [snacks, setSnacks] = useState();
 
-    console.log(order);
+    const handleSubmit = () => {
+        console.log(order);
+        OrderService.create(order)
+
+    }
+
     return (
         <div className='order-review'>
             <h1>Order Review</h1>
@@ -73,7 +79,7 @@ const Order = (props) => {
             </div>
 
 
-            <button type='submit' className='submit-order'>Submit Order</button>
+            <button onClick={handleSubmit} type='submit' className='submit-order'>Submit Order</button>
         </div>
     )
 }

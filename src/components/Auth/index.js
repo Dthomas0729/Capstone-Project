@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as UserService from "../../api/UserService";
 import { setToken } from "../../utils/tokenService";
-
+import './styles.css';
 
 const Auth = () => {
 
@@ -33,7 +33,7 @@ const Auth = () => {
     
     
     return (
-        <div>
+        <div className='sign-in-form'>
             <h1>Sign In</h1>
 
             <input type="email" onChange={(e) => setEmail(e.target.value)} value={email} placeholder="email"/>

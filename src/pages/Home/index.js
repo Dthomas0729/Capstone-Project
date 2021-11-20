@@ -33,24 +33,6 @@ const Home = () => {
                 });
                 setNowPlaying(nowPlayingMovies);
             })
-
-            // axios.get(tmdbUrlUpcoming).then((res) => {
-            //     const upcomingMovies = [];
-    
-            //     res.data.results.forEach(movie => {
-            //         upcomingMovies.push({
-            //             key: movie.id,
-            //             title: movie.title,
-            //             tmbdId: movie.id,
-            //             plot: movie.overview,
-            //             genreIds: movie.genre_ids,
-            //             popularity: movie.popularity,
-            //             poster: movie.poster_path,
-            //             releaseDate: movie.release_date,
-            //         })
-            //     });
-            //     setUpcoming(upcomingMovies);
-            // })
         }
         catch(err) {
             console.log(err)
