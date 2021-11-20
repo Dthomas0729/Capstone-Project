@@ -33,6 +33,11 @@ const Order = (props) => {
         }
     }, [])
 
+    const handleAddOns = (e) => {
+        const addOn = e.target.value;
+        setAddOns(addOn);
+    }
+
     const handleSubmit = () => {
         console.log(order);
 
@@ -93,11 +98,12 @@ const Order = (props) => {
                 <div className='add-ons'>
                     
                     <div>
-                        <select onChange={''} value={''}>
+                        <select onChange={handleAddOns} value={addOns}>
                             <option value='papers'>papers</option>,
                             <option value='blunts'>blunts</option>,
-                            <option value='6:00pm'>6:00pm</option>,
-                            <option value='9:45pm'>9:45pm</option>  
+                            <option value='pipe'>pipe</option>,
+                            <option value='vape'>vape</option>,
+                            <option value='hookah'>hookah</option>  
                         </select>
                     </div>
                 </div>
