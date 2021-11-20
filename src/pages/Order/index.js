@@ -1,4 +1,6 @@
 import React, { useState, useEffect }from 'react'
+import { useNavigate } from 'react-router';
+import { useAlert } from 'react-alert';
 import * as OrderService from '../../api/OrderService';
 import './styles.css';
 
@@ -6,8 +8,9 @@ const Order = (props) => {
     const strainData = JSON.parse(localStorage.getItem('strainOrder'));
     const movieData = JSON.parse(localStorage.getItem('movieOrder'));
 
+    const navigate = useNavigate();
+    const alert = useAlert();
     const [order, setOrder] = useState({
-        userId: props.user._id,
         strain: strainData.strain,
         gramAmount: strainData.gramAmount,
         movie: movieData.movie,
@@ -17,9 +20,31 @@ const Order = (props) => {
     const [addOns, setAddOns] = useState();
     const [snacks, setSnacks] = useState();
 
+    useEffect(() => {
+        if (props.user) {
+            const orderData = {
+                userId: props.user._id,
+                strain: strainData.strain,
+                gramAmount: strainData.gramAmount,
+                movie: movieData.movie,
+                startTime: movieData.startTime,
+            }
+            setOrder(orderData)
+        }
+    }, [])
+
     const handleSubmit = () => {
         console.log(order);
-        OrderService.create(order)
+
+        if (!order.userId) {
+            alert.show('Please sign-in to complete your order');
+            navigate('/profile')
+        } else {
+            OrderService.create(order)
+            alert.show('Order Created!');
+            navigate('/profile')
+        }
+
 
     }
 
