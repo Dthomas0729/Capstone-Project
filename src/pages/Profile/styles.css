@@ -1,0 +1,8 @@
+.profile-page {
+    height: 100vh;
+}
+
+.profile-page a {
+    text-decoration: none;
+    color: rgb(0, 191, 255);
+}

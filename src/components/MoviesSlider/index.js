@@ -43,18 +43,14 @@ const MoviesSlider = (props) => {
 
         <section className='slider'> 
 
-            <div className='slider-links'>
-                <button>Now Playing</button>
-                <button>Upcoming</button> 
-            </div>
+            <h2>Now Playing</h2>
 
-
-           <FaChevronLeft className='left-arrow' onClick={prevSlide} />
-           <FaChevronRight className='right-arrow' onClick={nextSlide} />
+            <FaChevronLeft className='left-arrow' onClick={prevSlide} />
+            <FaChevronRight className='right-arrow' onClick={nextSlide} />
            
-           {/* if (nowPlaying === true) {
+            {/* if (nowPlaying === true) {
 
-           } */}
+            } */}
             {props.nowPlaying.map((movie, index) => {
                         return (
                             <>

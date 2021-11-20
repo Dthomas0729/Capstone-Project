@@ -2,6 +2,7 @@ import React, { useState }from 'react'
 
 import Auth from '../../components/Auth'
 import { getUser } from '../../api/UserService';
+import './styles.css';
 
 const Profile = () => {
 
@@ -15,7 +16,7 @@ const Profile = () => {
     }
 
     return (
-        <div>
+        <div className="profile-page">
             <h1>{user.firstName} Is Logged In.</h1>
             
             <a href='/logout'>Log out</a>

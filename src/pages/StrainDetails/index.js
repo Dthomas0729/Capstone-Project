@@ -51,13 +51,24 @@ const StrainDetails = () => {
                     <h3>effect: {strain.effect}</h3>
                 </div>
 
-                <h1>How Much?</h1>
+                <h2>How many grams?</h2>
                 <input
                     onChange={(e) => setAmount(e.target.value)}
                     value={amount}
                     title="amount"
                     placeholder="0"
                 />
+
+                <div className="pre-rolls">
+                    <input 
+                        type='checkbox' 
+                        name='pre-rolled' 
+                        value='pre-roll'
+                    />
+                    <p>pre-rolls</p>
+                </div>
+                
+               
                 
                 <button onClick={handleSubmit} type="submit">Add To Order</button>      
             </div>

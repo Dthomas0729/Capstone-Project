@@ -30,3 +30,12 @@
     padding: .5rem 1rem;
     text-decoration: none;
 }
+
+.pre-rolls {
+    display: flex;
+    align-items: center;
+}
+
+.pre-rolls input {
+    width: 1rem;
+}

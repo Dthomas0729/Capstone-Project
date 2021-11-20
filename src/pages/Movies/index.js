@@ -37,16 +37,16 @@ const Movies = () => {
 
     return ( 
             <div className="movies-page">
-                <h1>Now Playing</h1>
+
                 <MoviesSlider nowPlaying={nowPlaying} />
 
-                <div className="movies-list">
+                {/* <div className="movies-list">
                     {nowPlaying.map((movie, index) => {
                         return (
                             <p>{movie.title}</p>
                         )
                     })}
-                </div>
+                </div> */}
             </div>
     )
 }
