@@ -1,9 +1,11 @@
 import React from 'react'
+import TopShelf from '../../components/TopShelf';
 
 const Cannabis = () => {
     return (
         <div>
-            <h1>Welcome to Our Cannabis Shop</h1>
+            <h1>Cannabis Shop</h1>
+            <TopShelf />
         </div>
     )
 }

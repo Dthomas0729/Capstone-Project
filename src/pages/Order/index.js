@@ -12,7 +12,7 @@ const Order = (props) => {
         movie: movieData.movie,
         startTime: movieData.startTime,
     });
-    const [tickets, setTickets] = useState();
+    const [tickets, setTickets] = useState(1);
     const [addOns, setAddOns] = useState();
     const [snacks, setSnacks] = useState();
 
@@ -33,7 +33,6 @@ const Order = (props) => {
             </div>
             
             <div className='strain-order'>
-
                 <div className='movie-order-img'>
                     <img src={order.strain.pictureUrl}></img>
                 </div>
@@ -47,10 +46,29 @@ const Order = (props) => {
             <div className='add-ons-container'>
                 <h3>Add-Ons</h3>
 
-                <div className='add-ons'>
-                    <h3>joint pre-rolled</h3>
-                    <button>3</button>
 
+                <div className='tickets'>
+                    <p className='tickets'>tickets</p>
+                    <div>
+                        <input
+                            onChange={(e) => setTickets(e.target.value)}
+                            value={tickets}
+                            title="tickets"
+                            placeholder="0"
+                        />
+                    </div>
+                </div>
+
+                <div className='add-ons'>
+                    
+                    <div>
+                        <select onChange={''} value={''}>
+                            <option value='papers'>papers</option>,
+                            <option value='blunts'>blunts</option>,
+                            <option value='6:00pm'>6:00pm</option>,
+                            <option value='9:45pm'>9:45pm</option>  
+                        </select>
+                    </div>
                 </div>
             </div>
 

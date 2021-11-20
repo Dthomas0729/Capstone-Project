@@ -2,10 +2,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    height: 100vh;
 }
 
-.movie-order, .strain-order {
+.movie-order, .strain-order, .tickets, .add-ons {
     width: 100vw;
     display: flex;
     align-items: center;
@@ -13,12 +13,23 @@
     margin-bottom: 2rem;
 }
 
-.movie-order-details, .strain-order-details {
+.movie-order-details, .strain-order-details, .tickets p {
     display: flex;
     flex-direction: column;
     width: 50vw;
+    padding: 0 1rem 0 1rem;
     align-self: center;
     align-items: center;
+    text-align: center;
+}
+
+.movie-order-details button, .strain-order-details button, .submit-order {
+    background-color: rgb(21, 63, 21);
+    color: white;
+    border: none;
+    border-radius: 1.5rem;
+    padding: .5rem 1rem;
+    text-decoration: none;
 }
 
 .movie-order-img, .strain-order-img {
@@ -33,10 +44,48 @@
     border-radius: 50%;
 }
 
-.movie-order-container div, .strain-order-container div {
+.add-ons-container {
     display: flex;
-    align-items: center; 
-    justify-content: space-between;
-    width: 100vw;
+    flex-direction: column;
+    align-items: center;
 }
- 
+
+.tickets p {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    padding: 0 1rem 0 1rem;
+    margin: 0px;
+    align-self: center;
+    align-items: center;
+    text-align: center;
+}
+
+.tickets div, .add-ons div {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    padding: 0 1rem 0 1rem;
+    margin: 0px;
+    align-self: center;
+    align-items: center;
+    text-align: center;
+}
+
+.add-ons div {
+    padding: 0px;
+}
+
+.tickets input {
+    width: 4rem;
+    text-align: center;
+}
+
+.add-ons {
+    justify-content: flex-end;
+}
+
+.add-ons select {
+    width: 4rem;
+    text-align: center;
+}

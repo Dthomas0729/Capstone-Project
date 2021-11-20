@@ -73,7 +73,7 @@ const MovieDetails = (props) => {
                 </div>
 
                 <p>{movie.plot}</p>
-                <button onClick={handleSubmit} type="submit">Submit</button>
+                <button onClick={handleSubmit} type="submit">Add To Order</button>
                 
             </div>
         </>

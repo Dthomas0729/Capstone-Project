@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router';
 import Data from '../../api/strains.json'
+import TopShelf from '../../components/TopShelf';
 
 import './styles.css';
 
@@ -29,25 +30,29 @@ const StrainDetails = () => {
     }
 
     return (
-        <div className="strain-details">
-            <h1>{strain.name}</h1>
-            <h2>{strain.type}  |  thc: {strain.thc}</h2>
-            <img src={strain.pictureUrl} alt={strain.name}></img>
+        <>
+            <div className="strain-details">
+                <h1>{strain.name}</h1>
+                <h2>{strain.type}  |  thc: {strain.thc}</h2>
+                <img src={strain.pictureUrl} alt={strain.name}></img>
 
-            <h3>flavor: {strain.flavor}</h3>
-            <h3>effect: {strain.effect}</h3>
+                <div className="details-wrapper">
+                    <h3>flavor: {strain.flavor}</h3>
+                    <h3>effect: {strain.effect}</h3>
+                </div>
 
-            <h1>How Much?</h1>
-            <input
-                onChange={(e) => setAmount(e.target.value)}
-                value={amount}
-                title="amount"
-                placeholder="grams"
-            />
-            
-            <button onClick={handleSubmit} type="submit">Submit</button>
-            
-        </div>
+                <h1>How Much?</h1>
+                <input
+                    onChange={(e) => setAmount(e.target.value)}
+                    value={amount}
+                    title="amount"
+                    placeholder="0"
+                />
+                
+                <button onClick={handleSubmit} type="submit">Submit</button>      
+            </div>
+            <TopShelf />
+        </>
     )
 }
 

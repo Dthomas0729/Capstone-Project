@@ -21,3 +21,21 @@
 .hero-buttons button {
     margin: 0.5rem;
 }
+
+.get-started {
+    background-color: rgb(21, 63, 21);
+    color: white;
+    border: none;
+    border-radius: 1.5rem;
+    padding: .5rem 1rem;
+    text-decoration: none;
+}
+
+.learn-more {
+    background-color: grey;
+    color: white;
+    border: none;
+    border-radius: 1.5rem;
+    padding: .5rem 1rem;
+    text-decoration: none;
+}

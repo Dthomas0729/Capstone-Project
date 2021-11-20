@@ -5,13 +5,28 @@
     width: 100vw;
     padding: 1rem;
     margin-left: 4rem;
+    text-decoration: none;
 }
 
-.strain-details p, h3 { 
+.strain-info {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-decoration: none;
+
+}
+
+.strain-info p, h3 { 
+    align-items: baseline;
+    display: flex;
     text-decoration: none;
     color: white;
     margin: 0px;
+    text-align: left;
+}
 
+.price {
+    text-decoration: none;
 }
 
 .strain-image {
