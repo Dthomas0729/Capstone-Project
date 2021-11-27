@@ -1,5 +1,7 @@
 # Dankees Capstone Project
 
+
+view on mobile for best experience
 https://smoker-cinemas.herokuapp.com/
 
 # ERD ----------
