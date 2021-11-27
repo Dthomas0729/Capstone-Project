@@ -1,5 +1,7 @@
 # Dankees Capstone Project
 
+https://smoker-cinemas.herokuapp.com/
+
 # ERD ----------
 
 ![Screen Shot 2021-11-20 at 12 58 52 PM](https://user-images.githubusercontent.com/63202540/142736528-f7f6209a-b061-4152-a3b0-295c4fd5c76c.png)
