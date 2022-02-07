@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
 .hero {
     display: flex;
     flex-direction: column;
@@ -16,16 +18,36 @@
         background-size: cover;
         background-position: center;
     }
-}
-/* .hero img {
 
-} */
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 50%;
+        padding-left: 4rem;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        text-align: center;
+        color: white;
+        margin: 12px 36px;
+        text-shadow: 25rem;
+        font-size: 62px;
+        font-family: 'Work Sans', sans-serif;
+        letter-spacing: 2.5px;
+        
+    }
+}   
+
 
 .hero h1 {
     text-align: center;
     color: white;
     margin: 12px 36px;
     text-shadow: 25rem;
+    font-family: 'Work Sans', sans-serif;
+    letter-spacing: 2.5px;
 }
 
 .hero-buttons {
@@ -36,6 +58,8 @@
 
 .hero-buttons button {
     margin: 0.5rem;
+    font-family: 'Work Sans';
+    font-weight: bold;
 }
 
 .get-started {
@@ -48,7 +72,7 @@
 }
 
 .learn-more {
-    background-color: grey;
+    background-color: transparent;
     color: white;
     border: none;
     border-radius: 1.5rem;

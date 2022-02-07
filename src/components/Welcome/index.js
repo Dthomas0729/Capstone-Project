@@ -11,11 +11,14 @@ const Welcome = () => {
     return (
         <section style={{ backgroundImage: `url(${dopeTheater})` }} className='hero'>
         
-            <h1>" Elevate " Your Theater Experience</h1>
+            <div className='main-content'>
+                <h1>" Elevate " Your Theater Experience</h1>
 
-            <div className='hero-buttons'>
-                <button className='get-started' onClick={()=> navigate('/movies')}>Get Started</button>
-                {/* <button className='learn-more'>Learn More</button> */}
+                <div className='hero-buttons'>
+                    <button className='get-started' onClick={()=> navigate('/movies')}>Get Started</button>
+                    <button className='learn-more'>Learn More</button>
+                </div>
+
             </div>
         </section>
     )
