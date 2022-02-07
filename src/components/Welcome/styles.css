@@ -7,6 +7,16 @@
     background-position: center;
 }
 
+@media only screen and (min-width: 600px) {
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+    }
+}
 /* .hero img {
 
 } */

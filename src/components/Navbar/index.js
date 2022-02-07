@@ -30,7 +30,7 @@ const Navbar = () => {
     return (
         <>
 
-            <nav>
+            <nav id='main-nav'>
                 <div className='nav-brand'>
                     <Link style={{textDecoration: 'none', color: 'white'}} to='/'>
                         <h1> Dankees </h1>
@@ -81,7 +81,7 @@ const Navbar = () => {
                             My Order
                         </Link>
                     </div>
-            </nav>
+                </nav>
 
                 <MediaQuery minWidth={950}>
                     <ul className="nav-links">

@@ -12,7 +12,7 @@ const app = express(); // create express app
 
 /* ====  Configuration  ==== */
 require('./config/database');
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 4000;
 
 app.use(cors());
 // to serve static files and to serve the react build
@@ -47,5 +47,5 @@ app.use((req, res, next) => {
 });
 
 app.listen(PORT, () => {
-    console.log("Dankees server started on port 5000");
+    console.log("Dankees server started on port 4000");
 });
