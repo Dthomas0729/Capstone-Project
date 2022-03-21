@@ -51,6 +51,7 @@ const MoviesSlider = (props) => {
             {/* if (nowPlaying === true) {
 
             } */}
+            
             {props.nowPlaying.map((movie, index) => {
                         return (
                             <>

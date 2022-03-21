@@ -85,3 +85,94 @@
     margin: 2rem;
     /* transform: scale(1.02) */
 }
+
+@media screen and (min-width: 767px) {
+    .slider {
+        position: relative;
+        height: 700px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background-color: black;
+    }
+    
+    .slider svg {
+        filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+      }
+    
+    .slider h2 {
+        position: absolute;
+        margin-top: 4rem;
+        top: 0;
+        z-index: 1;
+    }
+    
+    .right-arrow {
+        position: absolute;
+        top: 50%;
+        right: 32px;
+        font-size: 3rem;
+        color: white;
+        z-index: 1;
+        cursor: pointer;
+        user-select: none;
+    }
+    
+    .left-arrow {
+        position: absolute;
+        top: 50%;
+        left: 32px;
+        font-size: 3rem;
+        color: white;
+        z-index: 1;
+        cursor: pointer;
+        user-select: none;
+    }
+    
+    .slide {
+        opacity: 0;
+        transition-duration: .5s ease;
+    }
+    
+    .slide.active {
+        opacity: 1;
+        transition-duration: .5s;
+        /* transform: scale(1.02) */
+        width: 100vw;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        backdrop-filter: blur(10px);
+        filter: blur(30px) brightness(50%);
+        position: absolute;
+        z-index: 0;
+    
+    }
+    
+    .slide.active h1 {
+        position: absolute;
+        color: white;
+        text-align: center;
+        font-size: 4rem;
+        z-index: 1;
+    }
+    
+    .details-slide {
+        opacity: 0;
+        transition-duration: 1s ease;
+    }
+    
+    .details-slide.active {
+        opacity: 1;
+        transition-duration: 1s;
+        position: absolute;
+        margin-left: 30rem;
+        top: 0px;
+        margin-top: 10rem;
+        color: white;
+        text-align: center;
+        font-size: 1rem;
+        /* transform: scale(1.02) */
+    }
+}

@@ -14,3 +14,16 @@
     transition-duration: 1s ease;
     pointer-events: none;
 }
+
+@media screen and (min-width: 767px) {
+    .main-poster.active {
+        opacity: 1;
+        transition-duration: .5s;
+        width: 320px;
+        height: auto;
+        position: absolute;
+        left: 0px;
+        margin-left: 10rem;
+    
+    }
+}
