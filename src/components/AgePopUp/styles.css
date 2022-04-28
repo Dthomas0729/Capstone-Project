@@ -29,4 +29,10 @@
     text-decoration: none;
     padding: .5rem 1rem;
     margin: .5rem;
+    transition: 0.3s;
 }
+
+.age-verify button:hover {
+    background-color: white;
+    color: black;
+  }

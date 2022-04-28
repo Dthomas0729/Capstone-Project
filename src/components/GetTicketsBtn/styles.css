@@ -5,4 +5,10 @@
     border-radius: 1.5rem;
     padding: .5rem 1rem;
     text-decoration: none;
+    transition: 0.3s;
+}
+
+.get-tickets-btn:hover {
+    background-color: white;
+    color: black;
 }

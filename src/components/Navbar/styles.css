@@ -83,7 +83,7 @@ nav {
 }
 
 .nav-menu-items a:hover {
-    background-color: rgb(21, 63, 21);;
+    background-color: rgb(21, 63, 21);
 }
 
 .nav-brand {
@@ -97,15 +97,18 @@ nav {
 .profile {
     display: flex; 
     align-items: center;
+    transition: 0.3s;
 }
 
 .profile a {
     text-decoration: none;
-    color: rgb(21, 63, 21); 
+    color: white; 
 }
 
-.profile a:first-child {
-    color: rgb(21, 63, 21); 
+.profile:hover {
+    background-color: rgb(21, 63, 21);
+    border-radius: 1.5rem;
+    padding: .2rem .5rem;
 }
 
 .profile a:last-child {
@@ -116,11 +119,22 @@ nav {
 .nav-links {
     display: flex;
     width: 50%;
-    margin-right: 24px;
+    margin: 0px 24px 0px 0px;
     justify-content: space-around; 
 }
 
 .nav-links a {
     text-decoration: none;
     color: white;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: rgb(21, 63, 21);
+    color: white;
+    border: none;
+    border-radius: 1.5rem;
+    padding: .5rem 1rem;
+    text-decoration: none;
 }
