@@ -92,7 +92,7 @@ const Navbar = () => {
                             Movies
                         </Link>
                         <Link to='/cannabis'>
-                            Cannabis
+                            Menu
                         </Link>
                         <Link to='/profile'>
                             Profile

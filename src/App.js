@@ -12,7 +12,8 @@ function App() {
   const [age, setAge] = useState(0);
 
 
-  return (age < 21 ? <AgePopup setAge={setAge} /> :
+  // return (age < 21 ? <AgePopup setAge={setAge} /> :
+  return (
 
     <div className="App" style={{backgroundColor: 'black', color: 'white'}}>
       
