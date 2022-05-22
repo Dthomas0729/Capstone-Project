@@ -15,7 +15,7 @@ const Welcome = () => {
                 <h1>" Elevate " Your Theater Experience</h1>
 
                 <div className='hero-buttons'>
-                    <button className='get-started' onClick={()=> navigate('/movies')}>Get Started</button>
+                    <button className='get-started' onClick={()=> navigate('/Movies')}>Start Order</button>
                     <button className='learn-more'>Learn More</button>
                 </div>
 

@@ -13,10 +13,21 @@
   }
 
 .slider h2 {
+    font-family: 'Work Sans', sans-serif;
     position: absolute;
     margin-top: 8rem;
     top: 0;
     z-index: 1;
+}
+
+.slider-content {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: black;
 }
 
 .right-arrow {
@@ -168,8 +179,7 @@
         transition-duration: 1s;
         position: absolute;
         margin-left: 30rem;
-        top: 0px;
-        margin-top: 10rem;
+        top: 12rem;
         color: white;
         text-align: center;
         font-size: 1rem;
