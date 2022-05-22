@@ -44,7 +44,6 @@ const Home = () => {
             <Welcome />
             <MoviesSlider nowPlaying={nowPlaying} />
             <TopShelf />
-            <Footer />
         </div>
     )
 }

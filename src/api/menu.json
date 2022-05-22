@@ -1,79 +1,71 @@
 {
-    "strains": [
+    "menu": [
         {
             "id": 1,
-            "name": "Cherry Pie",
-            "type": "Hybrid",
-            "thc": "16%",
-            "flavor": "sweet",
-            "effect": "giggly",
+            "name": "Movie Theater Popcorn",
+            "type": "Sativa",
+            "flavor": "strawberry",
+            "effect": "energetic",
             "price": "10.99",
-            "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxKcohycK5PYePpDuOq1pXnAFGXk0oKyCwOg&usqp=CAU"
+            "pictureUrl": "https://s3-us-east-2.amazonaws.com/orbitz-media/blog/wp-content/uploads/2017/01/16101720/popcorn.jpg"
             
         },
         {
             "id": 2,
-            "name": "Strawberry Cough",
-            "type": "Sativa",
-            "thc": "19%",
-            "flavor": "strawberry",
-            "effect": "energetic",
-            "price": "10.99",
-            "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzWwDrMNUIEPxv5jNJTF9ozDwRTDeyk25tZw&usqp=CAU"
-            
+            "name": "Cherry Pie",
+            "type": "Hybrid",
+            "flavor": "sweet",
+            "effect": "giggly",
+            "price": "7.99",
+            "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxKcohycK5PYePpDuOq1pXnAFGXk0oKyCwOg&usqp=CAU"
         },
         {
             "id": 3,
             "name": "Girl Scout Cookies",
             "type": "Hybrid",
-            "thc": "19%",
             "flavor": "sweet",
             "effect": "hungry",
-            "price": "10.99",
-            "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKCVy1V1yKnvgO3l4anhGfkQs9A2Bqs8wP9g&usqp=CAU"
+            "price": "7.99",
+            "pictureUrl": "https://s.hdnux.com/photos/01/23/47/13/21918401/3/ratio3x2_1800.jpg"
             
         },
         {
             "id": 4,
-            "name": "Forbidden Fruit",
+            "name": "Chocolate Strawberries",
             "type": "Indica",
-            "thc": "16%",
             "flavor": "citrus",
             "effect": "relaxed",
-            "price": "10.99",
-            "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBMq25orZijv7sqPIGpkfGkAL1SnE_waNFbQ&usqp=CAU"
+            "price": "7.99",
+            "pictureUrl": "https://www.simplyrecipes.com/thmb/YjL9RsRhH0P8x275TRlTwgSv0wI=/2000x1333/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2018__02__Chocolate-Covered-Strawberries-LEAD-2-b0c2f9d4efd2448899fa12af31910a3d.jpg"
         },
         {
             "id": 5,
-            "name": "Lemon Haze",
+            "name": "Lemon Shrimp Kabobs",
             "type": "Sativa",
-            "thc": "19%",
             "flavor": "lemon",
             "effect": "euphoric",
-            "price": "10.99",
-            "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi9RVLII1-37GqYWK5QaGQacPnygWtzKflHw&usqp=CAU"
+            "price": "12.99",
+            "pictureUrl": "https://lifemadeketo.com/wp-content/uploads/2018/07/Low-Carb-Shrimp-Kebabs-with-Lemon-Herb-Butter-Sauce.jpg"
             
         },
         {
             "id": 6,
-            "name": "Incredible Hulk",
+            "name": "Incredible Chicken Sandwich",
             "type": "Sativa",
-            "thc": "16%",
             "flavor": "earthy",
             "effect": "euphoric",
-            "price": "10.99",
-            "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrkuF_nSVaF2nMoxtr8woReehM1OWYTGLrVg&usqp=CAU"
+            "price": "11.99",
+            "pictureUrl": "https://blog.yelp.com/wp-content/uploads/2021/06/chick_bredsnashvillehotchicken-4-750x630.jpeg"
             
         },
         {
             "id": 7,
-            "name": "Green Crack",
+            "name": "Salmon + Cucumber Rolls",
             "type": "Sativa",
-            "thc": "17%",
             "flavor": "citrus",
             "effect": "energetic",
-            "price": "11.99",
-            "pictureUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTalpO0YFU1zc5w2dG5zS8h1PGnzHyQ1HgaEQ&usqp=CAU"
+            "price": "10.99",
+            "pictureUrl": "https://www.appetizeraddiction.com/wp-content/uploads/2019/01/smoked-salmon-cucumber-rolls-picture.jpg"
         }
     ]
     

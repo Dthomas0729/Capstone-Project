@@ -27,9 +27,9 @@ const MovieDetails = (props) => {
         alert.show(`1 ticket for ${movie.title} added to order`);
         
         if (localStorage.getItem('strainOrder')) {
-            navigate('/order');
+            navigate('/Order');
         } else {
-            navigate('/cannabis');
+            navigate('/Menu');
         }
     }
     

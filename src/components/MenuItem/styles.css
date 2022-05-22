@@ -1,4 +1,4 @@
-.strain {
+.menuItem {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -7,7 +7,7 @@
     text-decoration: none;
 }
 
-.strain-info {
+.menuItem-info {
     display: flex;
     flex-direction: column;
     align-items: baseline;
@@ -15,7 +15,7 @@
     margin-left: 4rem;
 }
 
-.strain-info p, h3 { 
+.menuItem-info p, h3 { 
     align-items: baseline;
     display: flex;
     text-decoration: none;
@@ -28,7 +28,7 @@
     text-decoration: none;
 }
 
-.strain-image {
+.menuItem-image {
     width: 4rem;
     height: 4rem;
     border-radius: 50%;

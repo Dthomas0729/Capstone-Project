@@ -5,7 +5,7 @@
     height: 100vh;
 }
 
-.movie-order, .strain-order, .tickets, .add-ons {
+.movie-order, .menuItem-order, .tickets, .add-ons {
     width: 100vw;
     display: flex;
     align-items: center;
@@ -13,7 +13,7 @@
     margin-bottom: 2rem;
 }
 
-.movie-order-details, .strain-order-details, .tickets p {
+.movie-order-details, .menuItem-order-details, .tickets p {
     display: flex;
     flex-direction: column;
     width: 50vw;
@@ -23,7 +23,7 @@
     text-align: center;
 }
 
-.movie-order-details button, .strain-order-details button, .submit-order {
+.movie-order-details button, .menuItem-order-details button, .submit-order {
     background-color: rgb(21, 63, 21);
     color: white;
     border: none;
@@ -32,13 +32,13 @@
     text-decoration: none;
 }
 
-.movie-order-img, .strain-order-img {
+.movie-order-img, .menuItem-order-img {
     display: flex;
     width: 50vw;
     justify-content: center;
 }
 
-.movie-order img, .strain-order img {
+.movie-order img, .menuItem-order img {
     width: 7rem;
     height: 7rem;
     border-radius: 50%;

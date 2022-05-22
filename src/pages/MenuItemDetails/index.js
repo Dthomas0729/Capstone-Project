@@ -1,58 +1,57 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router';
 import { useAlert } from 'react-alert';
-import Data from '../../api/strains.json'
+import Data from '../../api/menu.json'
 import TopShelf from '../../components/TopShelf';
 
 import './styles.css';
 
-const strains = Data.strains;
+const menu = Data.menu;
 
 const fetchData = (id) => {
-    const strain = strains.find(strain => strain.id == id);
-    console.log(strain);
-    return strain
+    const MenuItem = menu.find(MenuItem => MenuItem.id == id);
+    console.log(id);
+    console.log(MenuItem);
+    return MenuItem
 }
 
-const StrainDetails = () => {
+const MenuItemDetails = () => {
     const alert = useAlert();
     const navigate = useNavigate();
     const { id } = useParams();
 
-    const [strain] = useState(fetchData(id));
+    const [menuItem] = useState(fetchData(id));
     const [amount, setAmount] = useState();
 
     const handleSubmit = () => {
         const orderData = {
-            strain: strain,
-            gramAmount: amount,
+            menuItem: menuItem,
         }
         
         console.log(orderData);
-        localStorage.setItem('strainOrder', JSON.stringify(orderData))
-        alert.show(`${amount} grams of ${strain.name} has been added to your order`)
+        localStorage.setItem('menuOrder', JSON.stringify(orderData))
+        alert.show(`${menuItem.name} has been added to your order`)
 
         if (localStorage.getItem('movieOrder')) {
-            navigate('/order');
+            navigate('/Order');
         } else {
-            navigate('/movies');
+            navigate('/Movies');
         }
     }
 
     return (
         <>
-            <div className="strain-details">
-                <h1>{strain.name}</h1>
-                <h2>{strain.type}  |  thc: {strain.thc}</h2>
-                <img src={strain.pictureUrl} alt={strain.name}></img>
+            <div className="menuItem-details">
+                <h1>{menuItem.name}</h1>
+                <img src={menuItem.pictureUrl} alt={menuItem.name}></img>
 
                 <div className="details-wrapper">
-                    <h3>flavor: {strain.flavor}</h3>
-                    <h3>effect: {strain.effect}</h3>
+                    <h3>flavor: {menuItem.flavor}</h3>
+                    <h3>effect: {menuItem.effect}</h3>
                 </div>
 
-                <h2>How many grams?</h2>
-                <input
+                {/* <h2>How many grams?</h2> */}
+                {/* <input
                     onChange={(e) => setAmount(e.target.value)}
                     value={amount}
                     title="amount"
@@ -66,7 +65,7 @@ const StrainDetails = () => {
                         value='pre-roll'
                     />
                     <p>pre-rolls</p>
-                </div>
+                </div> */}
                 
                
                 
@@ -77,4 +76,4 @@ const StrainDetails = () => {
     )
 }
 
-export default StrainDetails
+export default MenuItemDetails
