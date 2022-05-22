@@ -1,5 +1,5 @@
 import React from 'react'
-import topShelfImg from '../../images/top-shelf.jpg';
+import topShelfImg from '../../images/maxresdefault.jpeg';
 import Strain from '../Strain';
 import StrainData from '../../api/strains.json'
 
@@ -10,7 +10,7 @@ const TopShelf = () => {
     return (
         <section className="top-shelf">
             <div style={{ backgroundImage: `url(${topShelfImg})` }} alt="top shelf" className="top-shelf-image"> </div>
-            <h1>Top Shelf</h1>
+            <h1>Top Shelf Menu</h1>
             
             {StrainData.strains.map((strain, index) => {
                         return (
