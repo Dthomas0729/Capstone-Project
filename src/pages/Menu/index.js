@@ -1,7 +1,7 @@
 import React from 'react'
 import TopShelf from '../../components/TopShelf';
 
-const Cannabis = () => {
+const Menu = () => {
     return (
         <div>
             <TopShelf />
@@ -9,4 +9,4 @@ const Cannabis = () => {
     )
 }
 
-export default Cannabis
+export default Menu

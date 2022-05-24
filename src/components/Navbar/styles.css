@@ -1,5 +1,6 @@
 
 nav {
+    font-family: 'Work Sans', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,6 +72,7 @@ nav {
 }
 
 .nav-menu-items a {
+    font-weight: bold;
     text-decoration: none;
     color: white;
     font-size: 18px;
@@ -95,6 +97,7 @@ nav {
 }
 
 .profile {
+    font-weight: bold;
     display: flex; 
     align-items: center;
     transition: 0.3s;
@@ -126,6 +129,7 @@ nav {
 .nav-links a {
     text-decoration: none;
     color: white;
+    font-weight: bold;
     height: 100%;
     transition: 0.3s;
 }

@@ -1,28 +1,28 @@
 import React from 'react'
-import topShelfImg from '../../images/top-shelf.jpg';
-import Strain from '../Strain';
-import StrainData from '../../api/strains.json'
-
+import topShelfImg from '../../images/maxresdefault.jpeg';
+import MenuItem from '../MenuItem';
+import Data from '../../api/menu.json';
 import './styles.css'
 
 const TopShelf = () => {
-    // console.log(StrainData)
+    // console.log(Menu)
     return (
         <section className="top-shelf">
             <div style={{ backgroundImage: `url(${topShelfImg})` }} alt="top shelf" className="top-shelf-image"> </div>
-            <h1>Top Shelf</h1>
+            <h1>Top Shelf Menu</h1>
             
-            {StrainData.strains.map((strain, index) => {
+            {Data.menu.map((menuItem, index) => {
                         return (
-                            <Strain
-                                name={strain.name}
-                                id={strain.id} 
-                                type={strain.type} 
-                                flavor={strain.flavor}
-                                effect={strain.effect} 
-                                thc={strain.thc}
-                                price={strain.price}
-                                pictureUrl={strain.pictureUrl}
+                            <MenuItem
+                                key={menuItem.id}
+                                name={menuItem.name}
+                                id={menuItem.id} 
+                                type={menuItem.type} 
+                                flavor={menuItem.flavor}
+                                effect={menuItem.effect} 
+                                thc={menuItem.thc}
+                                price={menuItem.price}
+                                pictureUrl={menuItem.pictureUrl}
                             />
                         )
                     })}

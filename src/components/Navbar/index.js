@@ -8,17 +8,16 @@ import { getUser } from '../../api/UserService';
 
 import Home from '../../pages/Home';
 import Movies from '../../pages/Movies';
-import Cannabis from '../../pages/Cannabis';
-import Snacks from '../../pages/Snacks';
+import Menu from '../../pages/Menu';
 import Order from '../../pages/Order';
-import Theater from '../../pages/Theater';
 import Profile from '../../pages/Profile';
 import SignUpForm from '../SignUpForm';
 import Logout from '../Logout'
+import MovieDetails from "../../pages/MovieDetails";
+import MenuItem from '../../pages/MenuItemDetails';
 
 import "./styles.css";
-import MovieDetails from "../../pages/MovieDetails";
-import StrainDetails from "../../pages/StrainDetails";
+
 
 const Navbar = () => {
 
@@ -39,11 +38,11 @@ const Navbar = () => {
 
                 <div className='profile'>
 
-                    <Link to='/profile'>
+                    <Link to='/Profile'>
                         <FaUserCircle fontSize='28px'/>
                     </Link>
                     <MediaQuery minWidth={950}>
-                    <Link to='/profile'>
+                    <Link to='/Profile'>
                         {user ? (<h2>{user.firstName}</h2>) : ( <p>Sign In</p> )}
                     </Link>
                     </MediaQuery>
@@ -68,16 +67,16 @@ const Navbar = () => {
                         <Link to='/'>
                             Home
                         </Link>
-                        <Link to='/movies'>
+                        <Link to='/Movies'>
                             Movies
                         </Link>
-                        <Link to='/cannabis'>
-                            Cannabis
+                        <Link to='/Menu'>
+                            Menu
                         </Link>
-                        <Link to='/profile'>
+                        <Link to='/Profile'>
                             Profile
                         </Link>
-                        <Link to='/order'>
+                        <Link to='/Order'>
                             My Order
                         </Link>
                     </div>
@@ -88,16 +87,16 @@ const Navbar = () => {
                         <Link to='/'>
                             Home
                         </Link>
-                        <Link to='/movies'>
+                        <Link to='/Movies'>
                             Movies
                         </Link>
-                        <Link to='/cannabis'>
-                            Cannabis
+                        <Link to='/Menu'>
+                            Menu
                         </Link>
-                        <Link to='/profile'>
+                        <Link to='/Profile'>
                             Profile
                         </Link>
-                        <Link to='/order'>
+                        <Link to='/Order'>
                             My Order
                         </Link>
                     </ul>
@@ -111,35 +110,27 @@ const Navbar = () => {
                         element={<Home user={user} />} 
                     />
                     <Route
-                        path="/movies"
+                        path="/Movies"
                         element={<Movies user={user} />} 
                     />
                     <Route
-                        path="/movies/:id"
+                        path="/Movies/:id"
                         element={<MovieDetails user={user} />} 
                     />
                     <Route
-                        path="/cannabis"
-                        element={<Cannabis user={user} />}
+                        path="/Menu"
+                        element={<Menu user={user} />}
                     />
                     <Route
-                        path="/cannabis/:id"
-                        element={<StrainDetails user={user} />}
+                        path="/Menu/:id"
+                        element={<MenuItem user={user} />}
                     />
                     <Route
-                        path="/snacks"
-                        element={<Snacks user={user} />}
-                    />
-                    <Route
-                        path="/theater"
-                        element={<Theater user={user} />}
-                    />
-                    <Route
-                        path="/order"
+                        path="/Order"
                         element={<Order user={user} />}
                     />
                     <Route
-                        path="/profile"
+                        path="/Profile"
                         element={<Profile user={user} />}
                     /> 
                     <Route

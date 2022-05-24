@@ -51,26 +51,26 @@ const MoviesSlider = (props) => {
             {/* if (nowPlaying === true) {
 
             } */}
-            
-            {props.nowPlaying.map((movie, index) => {
-                        return (
-                            <>
-                                <div style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w500${movie.poster})` }}
-                                    className={index === current ? 'slide active' : 'slide'} key={`${movie.key}-background`}>                                
-                                </div>
+            <div className='slider-content'>
+                {props.nowPlaying.map((movie, index) => {
+                            return (
+                                <>
+                                    <div style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w500${movie.poster})` }}
+                                        className={index === current ? 'slide active' : 'slide'} key={`${movie.key}-background`}>                                
+                                    </div>
 
-                                <MoviePoster index={index} current={current} posterPath={`https://image.tmdb.org/t/p/w500${movie.poster}`}/>
+                                    <MoviePoster index={index} current={current} posterPath={`https://image.tmdb.org/t/p/w500${movie.poster}`}/>
 
-                                <div className={index === current ? 'details-slide active' : 'details-slide'} key={`${movie.key}-details`}>
-                                        <h1>{movie.title}</h1>
-                                        <p>Release Date: {movie.releaseDate}</p>
-                                        <GetTicketsBtn index={index} current={current} movie={movie}/>
-                                </div>
+                                    <div className={index === current ? 'details-slide active' : 'details-slide'} key={`${movie.key}-details`}>
+                                            <h1>{movie.title}</h1>
+                                            <p>Release Date: {movie.releaseDate}</p>
+                                            <GetTicketsBtn index={index} current={current} movie={movie}/>
+                                    </div>
+                                </>
 
-                            </>
-
-                        )
-                    })}
+                            )
+                        })}
+            </div>
 
         </section>
     )

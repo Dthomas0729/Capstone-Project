@@ -1,11 +1,9 @@
 .main-poster.active {
     opacity: 1;
     transition-duration: .5s;
-
     width: 75vw;
     height: auto;
     position: absolute;
-
 
 }
 
@@ -22,8 +20,7 @@
         width: 320px;
         height: auto;
         position: absolute;
-        left: 0px;
-        margin-left: 10rem;
-    
+        left: 10rem;
+        top: 14rem;
     }
 }

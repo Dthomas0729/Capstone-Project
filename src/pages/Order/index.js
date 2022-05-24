@@ -5,27 +5,24 @@ import * as OrderService from '../../api/OrderService';
 import './styles.css';
 
 const Order = (props) => {
-    const strainData = JSON.parse(localStorage.getItem('strainOrder'));
+    const menuData = JSON.parse(localStorage.getItem('menuOrder'));
     const movieData = JSON.parse(localStorage.getItem('movieOrder'));
 
     const navigate = useNavigate();
     const alert = useAlert();
     const [order, setOrder] = useState({
-        strain: strainData.strain,
-        gramAmount: strainData.gramAmount,
+        menuItem: menuData.menuItem,
         movie: movieData.movie,
         startTime: movieData.startTime,
     });
     const [tickets, setTickets] = useState(1);
-    const [addOns, setAddOns] = useState();
-    const [snacks, setSnacks] = useState();
+    // const [addOns, setAddOns] = useState();
 
     useEffect(() => {
         if (props.user) {
             const orderData = {
                 userId: props.user._id,
-                strain: strainData.strain,
-                gramAmount: strainData.gramAmount,
+                menuItem: menuData.name,
                 movie: movieData.movie,
                 startTime: movieData.startTime,
             }
@@ -33,22 +30,21 @@ const Order = (props) => {
         }
     }, [])
 
-    const handleAddOns = (e) => {
-        const addOn = e.target.value;
-        setAddOns(addOn);
-    }
+    // const handleAddOns = (e) => {
+    //     const addOn = e.target.value;
+    //     setAddOns(addOn);
+    // }
 
     const handleSubmit = () => {
         console.log(order);
 
         if (!order.userId) {
             alert.show('Please sign-in to complete your order');
-            navigate('/profile')
         } else {
             OrderService.create(order)
             alert.show('Order Created!');
-            navigate('/profile')
         }
+        navigate('/Profile')
 
 
     }
@@ -68,14 +64,13 @@ const Order = (props) => {
                 </div>
             </div>
             
-            <div className='strain-order'>
+            <div className='menuItem-order'>
                 <div className='movie-order-img'>
-                    <img src={order.strain.pictureUrl}></img>
+                    <img src={order.menuItem.pictureUrl}></img>
                 </div>
 
-                <div className='strain-order-details'>
-                    <h2>{order.strain.name}</h2>
-                    <button>{order.gramAmount} grams</button>
+                <div className='menuItem-order-details'>
+                    <h2>{order.menuItem.name}</h2>
                 </div>
             </div>
 
@@ -92,19 +87,6 @@ const Order = (props) => {
                             title="tickets"
                             placeholder="0"
                         />
-                    </div>
-                </div>
-
-                <div className='add-ons'>
-                    
-                    <div>
-                        <select onChange={handleAddOns} value={addOns}>
-                            <option value='papers'>papers</option>,
-                            <option value='blunts'>blunts</option>,
-                            <option value='pipe'>pipe</option>,
-                            <option value='vape'>vape</option>,
-                            <option value='hookah'>hookah</option>  
-                        </select>
                     </div>
                 </div>
             </div>

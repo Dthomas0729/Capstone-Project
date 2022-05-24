@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
 
 .hero {
     display: flex;
@@ -23,8 +23,8 @@
         display: flex;
         flex-direction: column;
         height: 100%;
-        width: 50%;
-        padding-left: 4rem;
+        width: 100%;
+        /* padding-left: 4rem; */
         justify-content: center;
     }
 
@@ -33,7 +33,7 @@
         color: white;
         margin: 12px 36px;
         text-shadow: 25rem;
-        font-size: 62px;
+        font-size: 4.8rem;
         font-family: 'Work Sans', sans-serif;
         letter-spacing: 2.5px;
         
@@ -45,7 +45,7 @@
     text-align: center;
     color: white;
     margin: 12px 36px;
-    text-shadow: 25rem;
+    box-shadow: -1rem 1rem 1rem rgba(0, 0, 0, 0.3);
     font-family: 'Work Sans', sans-serif;
     letter-spacing: 2.5px;
 }
@@ -60,14 +60,17 @@
     margin: 0.5rem;
     font-family: 'Work Sans';
     font-weight: bold;
+    padding: 1.4rem 1rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+    border-radius: 2.2rem;
+    box-shadow: -1rem 1rem 1rem rgba(0, 0, 0, 0.3);
 }
 
 .get-started {
     background-color: rgb(21, 63, 21);
     color: white;
     border: none;
-    border-radius: 1.5rem;
-    padding: .5rem 1rem;
     text-decoration: none;
     transition: 0.3s;
 }
