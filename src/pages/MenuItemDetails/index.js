@@ -41,36 +41,21 @@ const MenuItemDetails = () => {
 
     return (
         <>
-            <div className="menuItem-details">
-                <h1>{menuItem.name}</h1>
-                <img src={menuItem.pictureUrl} alt={menuItem.name}></img>
-
-                <div className="details-wrapper">
-                    <h3>flavor: {menuItem.flavor}</h3>
-                    <h3>effect: {menuItem.effect}</h3>
+            <section className="menuItem-container">
+                <div className="menuItem-details">
+                    <h1>{menuItem.name}</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+molestiae quas vel sint commodi</p>
                 </div>
-
-                {/* <h2>How many grams?</h2> */}
-                {/* <input
-                    onChange={(e) => setAmount(e.target.value)}
-                    value={amount}
-                    title="amount"
-                    placeholder="0"
-                />
-
-                <div className="pre-rolls">
-                    <input 
-                        type='checkbox' 
-                        name='pre-rolled' 
-                        value='pre-roll'
-                    />
-                    <p>pre-rolls</p>
-                </div> */}
                 
+                <div className="menuItem-img">
+                    <img src={menuItem.pictureUrl} alt={menuItem.name}></img>
+
+                </div>
                
                 
                 <button onClick={handleSubmit} type="submit">Add To Order</button>      
-            </div>
+            </section>
             <TopShelf />
         </>
     )
