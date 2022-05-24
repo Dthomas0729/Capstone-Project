@@ -9,6 +9,7 @@
 }
 
 .menuItem-img img {
+    padding-top: 2rem;
     border-radius: 50%;
     width: 80vw;
     height: 35vh;
@@ -18,10 +19,8 @@
     margin-top: 1.5rem;
 }
 
-.menuItem-details input {
+.menuItem-details  {
     text-align: center;
-    font-size: 2rem;
-    width: 4rem;
 }
 
 .menuItem-container button {

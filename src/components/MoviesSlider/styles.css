@@ -100,7 +100,8 @@
 @media screen and (min-width: 767px) {
     .slider {
         position: relative;
-        height: 700px;
+        height: 100vh;
+        padding-top: 6rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -113,10 +114,7 @@
       }
     
     .slider h2 {
-        position: absolute;
-        margin-top: 4rem;
-        top: 0;
-        z-index: 1;
+        margin-top: 10rem;
     }
     
     .right-arrow {
