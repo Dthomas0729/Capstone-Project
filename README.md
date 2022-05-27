@@ -1,5 +1,6 @@
-# Dankees Capstone Project
+# Dankees
 
+Welcome to Dankees! A luxury theater for lovers of new and impactful cinema. We have movies now playing in all major theaters and streaming platforms along with a specially cured menu for a more tasteful theater experience. This is Dankees.
 
 view on mobile for best experience
 https://smoker-cinemas.herokuapp.com/
