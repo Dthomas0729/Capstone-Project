@@ -25,7 +25,8 @@ https://smoker-cinemas.herokuapp.com/
 # Capstone Project (2 weeks for MVP presentation)
 
 # WIREFRAMES --------------
-<img width="870" alt="Screen Shot 2022-05-27 at 1 06 47 AM" src="https://user-images.githubusercontent.com/63202540/170633198-0179e59e-6850-4473-86d2-0a6de5cf0274.png">
+<img width="845" alt="Screen Shot 2022-05-27 at 1 10 53 AM" src="https://user-images.githubusercontent.com/63202540/170633650-f0484213-4324-4fba-8135-89bbfa0c08ad.png">
+
 
 
 <img width="679" alt="Screen Shot 2022-05-27 at 1 00 14 AM" src="https://user-images.githubusercontent.com/63202540/170632557-7549bd8c-b6bb-426d-97a1-6a1a31b1efd3.png">
