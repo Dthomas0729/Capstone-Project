@@ -31,4 +31,10 @@ https://smoker-cinemas.herokuapp.com/
 ![Screen Shot 2021-11-20 at 1 00 40 PM](https://user-images.githubusercontent.com/63202540/142736553-de52f447-3202-4442-817f-39f3b2a0e6dc.png)
 
 # WIREFRAMES --------------
+<img width="870" alt="Screen Shot 2022-05-27 at 1 06 47 AM" src="https://user-images.githubusercontent.com/63202540/170633198-0179e59e-6850-4473-86d2-0a6de5cf0274.png">
+
+
+<img width="679" alt="Screen Shot 2022-05-27 at 1 00 14 AM" src="https://user-images.githubusercontent.com/63202540/170632557-7549bd8c-b6bb-426d-97a1-6a1a31b1efd3.png">
+
+
 
