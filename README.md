@@ -2,7 +2,14 @@
 
 Welcome to Dankees! A luxury theater for lovers of new and impactful cinema. We have movies now playing in all major theaters and streaming platforms along with a specially cured menu for a more tasteful theater experience. This is Dankees.
 
-view on mobile for best experience
+To view on mobile for best experience open chrome dev tools. 
+`option + command + i` for mac users.
+
+Press this button for mobile viewing options and select your favorite mobile view. -
+![Screen Shot 2022-05-27 at 12 04 20 AM](https://user-images.githubusercontent.com/63202540/170627991-0f8b3ff8-b8c8-456c-82d9-cdfcd133eca5.png)
+
+
+
 https://smoker-cinemas.herokuapp.com/
 
 # ERD ----------
