@@ -24,12 +24,6 @@ https://smoker-cinemas.herokuapp.com/
 
 # Capstone Project (2 weeks for MVP presentation)
 
-
-
-# USER FLOW --------------
-
-![Screen Shot 2021-11-20 at 1 00 40 PM](https://user-images.githubusercontent.com/63202540/142736553-de52f447-3202-4442-817f-39f3b2a0e6dc.png)
-
 # WIREFRAMES --------------
 <img width="870" alt="Screen Shot 2022-05-27 at 1 06 47 AM" src="https://user-images.githubusercontent.com/63202540/170633198-0179e59e-6850-4473-86d2-0a6de5cf0274.png">
 
