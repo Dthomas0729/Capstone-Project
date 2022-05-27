@@ -12,9 +12,19 @@ Press this button for mobile viewing options and select your favorite mobile vie
 
 https://smoker-cinemas.herokuapp.com/
 
-# ERD ----------
+## Technologies Used
+1. Javascript
+2. React
+3. Node
+4. Express
+5. MongoDB
+6. CSS / HTML
+7. JWT Authentication
+8. TMDB API (Movies database)
 
-![Screen Shot 2021-11-20 at 12 58 52 PM](https://user-images.githubusercontent.com/63202540/142736528-f7f6209a-b061-4152-a3b0-295c4fd5c76c.png)
+# Capstone Project (2 weeks for MVP presentation)
+
+
 
 # USER FLOW --------------
 
