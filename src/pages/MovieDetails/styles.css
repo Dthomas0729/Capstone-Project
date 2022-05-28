@@ -35,3 +35,43 @@
     margin-top: 1rem;
     width: 80vw;
 }
+
+@media only screen and (min-width: 600px) {
+    .movie-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        margin-top: 4rem;
+        background-color: black;
+    }
+    
+    .movie-details h2 {
+        padding: 0 2rem;
+        text-align: center;
+    }
+    
+    .movie-details p {
+        text-align: center;
+        padding: 0 2rem;
+        margin-top: 0;
+    }
+    
+    .movie-details button {
+        background-color: rgb(21, 63, 21);
+        color: blue;
+        border: none;
+        border-radius: 1.5rem;
+        padding: .5rem 1rem;
+        text-decoration: none;
+    }
+    
+    .showtimes {
+        margin-bottom: 2rem;
+    }
+    
+    .poster {
+        margin-top: 1rem;
+        width: 80vw;
+    }
+}
